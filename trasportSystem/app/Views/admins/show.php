@@ -5,12 +5,12 @@
 <section class="section">
           <div class="section-header">
             <ul>
-            <h1><i class="fa-solid fa-house"></i> Dashboard</h1>
+            <h1><i class="fa-solid fa-user"></i> Admins</h1>
             </ul>
           </div>
 
           <div class="section-body">
-            Hello word!
+            Show admins
           </div>
         </section>
 
