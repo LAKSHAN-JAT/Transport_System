@@ -11,8 +11,8 @@ $routes = Services::routes();
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Dashbord');
-$routes->setDefaultMethod('index');
+$routes->setDefaultController('Auth');
+$routes->setDefaultMethod('login');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
 // The Auto Routing (Legacy) is very dangerous. It is easy to create vulnerable apps
@@ -29,10 +29,10 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Dashbord::index');
+$routes->get('/', 'Auth::login');
 $routes->get('admins', 'admins::index');
-$routes->get('login', 'Auth::login');
-
+$routes->get('register', 'Auth::register');
+$routes->post('auth/save_register', 'Auth::save_register');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

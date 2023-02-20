@@ -32,7 +32,7 @@
 </script>
 <!-- /END GA --></head>
 
-<body>
+<body style="background-color: #eeeeee;">
   <div id="app">
     <section class="section">
       <div class="container mt-5">
@@ -43,7 +43,7 @@
             </div>
 
             <div class="card card-primary">
-              <div class="card-header"><h4>Login</h4></div>
+              <div class="card-header"><h4> Admin Login</h4></div>
 
               <div class="card-body">
                 <form method="POST" action="#" class="needs-validation" novalidate="">
