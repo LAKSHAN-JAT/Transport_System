@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Controllers;
-use App\Models\Model_Auth;
+
+use App\Models\ModelAuth;
 
 class Auth extends BaseController
 {
@@ -18,7 +19,7 @@ class Auth extends BaseController
     public function __construct()
     {
         helper('form');
-       $this->Model_Auth = new Model_Auth();
+       $this->ModelAuth = new ModelAuth();
     }
 
     public function register()
@@ -33,7 +34,7 @@ class Auth extends BaseController
     public function save_register(){
 
         if($this->validate([
-            'name-user' =>[
+            'name_user' =>[
                 'label' => 'Name User',
                 'rules' =>'required',
                 'errors' =>[
@@ -57,7 +58,7 @@ class Auth extends BaseController
                 ]
                 ],
 
-                  'password' =>[
+                  'passowrd' =>[
                 'label' => 'Password',
                 'rules' =>'required',
                 'errors' =>[
@@ -67,13 +68,23 @@ class Auth extends BaseController
 
                   'repassword' =>[
                 'label' => 'Retype Password',
-                'rules' =>'required|matches[Password]',
+                'rules' =>'required|matches[passowrd]',
                 'errors' =>[
                      'required' => 'Retype Password  is required',
                      'matches' => 'Confirm Password is invalid!!'
                 ]
                 ],
         ])){
+            $data  = array(
+                'name_user'=> $this->request->getPost('name_user'),
+                'email'=> $this->request->getPost('email'),
+                'tel_no'=> $this->request->getPost('tel_no'),
+                'passowrd'=> $this->request->getPost('passowrd'),
+                'level'=> 3
+            );
+            $this->ModelAuth->save_register($data);
+            session()->setFlashdata('message', 'Registration successful!!');
+            return redirect()->to(base_url('/register'));
 
         }else{
 

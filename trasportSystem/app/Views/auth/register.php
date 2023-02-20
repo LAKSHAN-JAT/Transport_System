@@ -64,14 +64,21 @@ void 0===window.kintMicrotimeInitialized&&(window.kintMicrotimeInitialized=1,win
         </ul>
     </div>
     <?php } ?>
+    <?php
+    if (session()->getFlashdata('message')) {
+      echo '<div class="alert alert-success" role="alert">';
+      echo session()->getFlashdata('message');
+      echo '</div>';
+    }
+       ?>
 
 
                 <?php
                     echo form_open('auth/save_register');
                 ?>
                   <div class="form-group">
-                    <label for="name">User name</label>
-                    <input id="name" type="text" class="form-control" name="name" tabindex="1">
+                    <label for="name_user">User name</label>
+                    <input id="name_user" type="text" class="form-control" name="name_user" tabindex="1">
                     <div class="invalid-feedback">
                       Please fill in your user name
                     </div>
@@ -86,8 +93,8 @@ void 0===window.kintMicrotimeInitialized&&(window.kintMicrotimeInitialized=1,win
                   </div>
 
                   <div class="form-group">
-                    <label for="number">Mobile Number</label>
-                    <input id="tel" type="text" class="form-control" name="tel" tabindex="1">
+                    <label for="tel_no">Mobile Number</label>
+                    <input id="tel_no" type="text" class="form-control" name="tel_no" tabindex="1">
                     <div class="invalid-feedback">
                       Please fill in your mobile
                     </div>
@@ -95,18 +102,18 @@ void 0===window.kintMicrotimeInitialized&&(window.kintMicrotimeInitialized=1,win
 
                   <div class="form-group">
                     <div class="d-block">
-                    	<label for="password" class="control-label">Password</label>
+                    	<label for="passowrd" class="control-label">Password</label>
                     </div>
-                    <input id="password" type="password" class="form-control" name="password" tabindex="2" >
+                    <input id="passowrd" type="password" class="form-control" name="passowrd" tabindex="2" >
                     <div class="invalid-feedback">
                       please fill in your password
                     </div>
                   </div>
                     <div class="form-group">
                     <div class="d-block">
-                    	<label for="password" class="control-label">Retype password</label>
+                    	<label for="repassword" class="control-label">Retype password</label>
                     </div>
-                    <input id="password" type="password" class="form-control" name="repassword" tabindex="2" >
+                    <input id="repassword" type="password" class="form-control" name="repassword" tabindex="2" >
                     <div class="invalid-feedback">
                       please fill in your Retype password
                     </div>
@@ -139,6 +146,13 @@ void 0===window.kintMicrotimeInitialized&&(window.kintMicrotimeInitialized=1,win
   <script src="http://localhost:8080/template/template/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="http://localhost:8080/template/template/assets/js/scripts.js"></script>
 
+  <script>
+          window.setTimeout(function() {
+            $('.alert').fadeTo(500,0).slideUp(500,function(){
+              $(this).remove();
+            });
+          }, 3000);
+  </script>
 </body>
 </html>
 <!-- DEBUG-VIEW ENDED 1 APPPATH\Views\auth\login.php -->
