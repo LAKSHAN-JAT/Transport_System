@@ -43,13 +43,32 @@
             </div>
 
             <div class="card card-primary">
-              <div class="card-header"><h4> Admin Login</h4></div>
-
+              <div class="card-header"><h4> Login!</h4></div>
+<?php 
+     $errors= session()->getFlashdata('errors');
+     if(!empty($errors)) {?>
+     <div class="alert alert-danger" role="alert">
+        <ul>
+            <?php foreach ($errors as $error): ?>
+            <li><?= esc($error) ?></li>
+        <?php endforeach ?>
+        </ul>
+    </div>
+    <?php } ?>
+    <?php
+    if (session()->getFlashdata('message')) {
+      echo '<div class="alert alert-success" role="alert">';
+      echo session()->getFlashdata('message');
+      echo '</div>';
+    }
+       ?>
               <div class="card-body">
-                <form method="POST" action="#" class="needs-validation" novalidate="">
+               <?php
+                    echo form_open('auth/check_login');
+                ?>
                   <div class="form-group">
                     <label for="email">Email</label>
-                    <input id="email" type="email" class="form-control" name="email" tabindex="1" required autofocus>
+                    <input id="email" type="email" class="form-control" name="email" tabindex="1"  autofocus>
                     <div class="invalid-feedback">
                       Please fill in your email
                     </div>
@@ -57,14 +76,14 @@
 
                   <div class="form-group">
                     <div class="d-block">
-                    	<label for="password" class="control-label">Password</label>
+                    	<label for="passowrd" class="control-label">Password</label>
                       <div class="float-right">
-                        <a href="auth-forgot-password.html" class="text-small">
-                          Forgot Password?
+                        <a href="auth-forgot-passowrd.html" class="text-small">
+                          Forgot passowrd?
                         </a>
                       </div>
                     </div>
-                    <input id="password" type="password" class="form-control" name="password" tabindex="2" required>
+                    <input id="passowrd" type="password" class="form-control" name="passowrd" tabindex="2" >
                     <div class="invalid-feedback">
                       please fill in your password
                     </div>
@@ -82,13 +101,13 @@
                       Login
                     </button>
                   </div>
-                </form>
+                  <?php echo form_close();?>
                
 
               </div>
             </div>
             <div class="mt-5 text-muted text-center">
-              Don't have an account? <a href="auth-register.html">Create One</a>
+              Don't have an account? <a href="<?= base_url('register')?>">SignUp Now</a>
             </div>
             <div class="simple-footer">
               Copyright &copy; Online Unit
@@ -104,6 +123,12 @@
   <script src="<?=base_url()?>/template/template/node_modules/jquery/dist/jquery.min.js"></script>
   <script src="<?=base_url()?>/template/template/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="<?=base_url()?>/template/template/assets/js/scripts.js"></script>
-
+  <script>
+          window.setTimeout(function() {
+            $('.alert').fadeTo(500,0).slideUp(500,function(){
+              $(this).remove();
+            });
+          }, 3000);
+  </script>
 </body>
 </html>

@@ -9,6 +9,16 @@
 
             $this->db->table('users')->insert($data);
         }
+
+        public function login($email, $passowrd){
+
+            return $this->db->table('users')->where([
+
+                'email' => $email,
+                'passowrd' => $passowrd
+            ])->get()->getRowArray();
+
+        }
     }
 
 

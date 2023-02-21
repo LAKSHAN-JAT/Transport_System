@@ -1,5 +1,5 @@
 <li class="menu-header">Main Menu</li>
-<li><a class="nav-link" href="<?=site_url('')?>"><i class="fas fa-fire"></i> <span>Dashboard</span></a></li>
+<li><a class="nav-link" href="<?=site_url('dashboard')?>"><i class="fas fa-fire"></i> <span>Dashboard</span></a></li>
 <li><a class="nav-link" href="<?=site_url('admins')?>"><i class="fas fa-user"></i> <span>Admins</span></a></li>
 
               <li class="nav-item dropdown">

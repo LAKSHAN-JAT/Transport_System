@@ -10,7 +10,7 @@
           </div>
 
           <div class="section-body">
-            Hello word!
+            Dashboard
           </div>
         </section>
 

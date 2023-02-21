@@ -13,7 +13,11 @@ class Auth extends BaseController
 
     public function login()
     {
-       return view('auth/login');
+        $data = array(
+            'title' => 'Login',
+
+        );
+        return view('auth/login', $data);
     }
 
     public function __construct()
@@ -46,7 +50,7 @@ class Auth extends BaseController
                 'label' => 'E-Mail',
                 'rules' =>'required',
                 'errors' =>[
-                     'required' => 'User Email  is required'
+                     'required' => 'Email  is required'
                 ]
 
                 ],
@@ -80,7 +84,7 @@ class Auth extends BaseController
                 'email'=> $this->request->getPost('email'),
                 'tel_no'=> $this->request->getPost('tel_no'),
                 'passowrd'=> $this->request->getPost('passowrd'),
-                'level'=> 3
+                'level'=> null
             );
             $this->ModelAuth->save_register($data);
             session()->setFlashdata('message', 'Registration successful!!');
@@ -94,5 +98,57 @@ class Auth extends BaseController
 
     }
 
+
+    public function check_login(){
+
+        if($this->validate([
+             'email' =>[
+                'label' => 'E-Mail',
+                'rules' =>'required',
+                'errors' =>[
+                     'required' => 'User Email  is required'
+                ]
+
+                ],
+                  'passowrd' =>[
+                'label' => 'Password',
+                'rules' =>'required',
+                'errors' =>[
+                     'required' => 'Password  is required'
+                ]
+                ],
+        ])){
+            $email = $this->request->getPost('email');
+            $passowrd = $this->request->getPost('passowrd');
+            $check = $this->ModelAuth->login($email, $passowrd);
+            if($check){
+
+                session()->set('log', true);
+                session()->set('name_user', $check['name_user']);
+                session()->set('email', $check['email']);
+                session()->set('level', $check['level']);
+
+                return redirect()->to(base_url('dashboard'));
+        }else{
+
+            session()->setFlashdata('message', 'Email or password incorrect..!!');
+            return redirect()->back();
+            
+        }
+    }else{
+
+         session()->setFlashdata('errors', \Config\Services::validation()->getErrors());
+            return redirect()->back();
+    }
+    }
+
+    public function logout(){
+        session()->remove('log');
+        session()->remove('name_user');
+        session()->remove('level');
+        
+        session()->setFlashdata('message', 'Logout Successfull..!!');
+            return redirect()->to(base_url('/'));
+    }
 
 }

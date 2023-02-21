@@ -51,7 +51,7 @@ void 0===window.kintMicrotimeInitialized&&(window.kintMicrotimeInitialized=1,win
             </div>
 
             <div class="card card-primary">
-              <div class="card-header"><h4> Admin Register</h4></div>
+              <div class="card-header"><h4> Registration!</h4></div>
               <div class="card-body">
      <?php 
      $errors= session()->getFlashdata('errors');
@@ -129,7 +129,7 @@ void 0===window.kintMicrotimeInitialized&&(window.kintMicrotimeInitialized=1,win
             </div>
             <?php echo form_close();?>
             <div class="mt-5 text-muted text-center">
-              Don't have an account? <a href="auth-register.html">Create One</a>
+              Already have an account? <a href="<?= base_url('/')?>">Login Now</a>
             </div>
             <div class="simple-footer">
               Copyright &copy; Online Unit
