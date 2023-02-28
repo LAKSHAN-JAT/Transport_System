@@ -51,7 +51,7 @@ void 0===window.kintMicrotimeInitialized&&(window.kintMicrotimeInitialized=1,win
             </div>
 
             <div class="card card-primary">
-              <div class="card-header"><h4> Registration!</h4></div>
+              <div class="card-header"><h4> Admin Registration!</h4></div>
               <div class="card-body">
      <?php 
      $errors= session()->getFlashdata('errors');

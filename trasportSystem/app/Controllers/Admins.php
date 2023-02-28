@@ -8,4 +8,8 @@ class Admins extends BaseController
     {
         return view('admins/show');
     }
+
+    public function create(){
+        return view('create-admins/createAdmins');
+    }
 }
