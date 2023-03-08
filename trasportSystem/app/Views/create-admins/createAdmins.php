@@ -36,11 +36,18 @@
                                 <div class="card-body">
                                     <div class="row">                                           
                                         <div class="col-12">
-                                             <form>
+                                            
+                                             <form name="createForm" id = "createForm" method="post">
                                                 <div class="form-row">
                                                     <div class="form-group col-md-4">
-                                                        <label for="inputfname">First Name</label>
-                                                        <input type="text" class="form-control rounded" id="fname">
+                                                        <label>First Name</label>
+                                                        <input type="text" class="form-control rounded" id="firstName" name = "firstName" <?php echo (isset($validation) && $validation->hasError('firstName'))? 'is-invalid' : '';?>>
+                                                        <?php
+                                                                 if(isset($validation) && $validation->hasError('firstName')){
+                                                                        echo '<p class = "invalid-feedback">'.$validation->getError('firstName').'</p>';
+                                                                 }
+                                                        
+                                                        ?>
                                                     </div>
                                                     <div class="form-group col-md-4">
                                                         <label for="inputlname">Last Name</label>
@@ -85,7 +92,7 @@
                                                 </div>
 
                                                 <button type="submit" class="btn btn-primary"><i class="fa-solid fa-check"></i> Save</button>
-                                             </form>
+                                            
                                         </div>
                                     </div>
                                 </div>

@@ -11,25 +11,27 @@ class Admins extends BaseController
 
     public function create(){
 
-        $session = \config\Services::session();
+        $session = \Config\Services::session();
         helper('form');
 
-        if($this->request->getMethod() == 'POST'){
+        $data = [];
+
+        if($this->request->getMethod() == 'post'){
             $input = $this->validate([
 
-                'image' => 'required',
+                
                 'firstName' => 'required',
-                'lastName' => 'required',
-                'emailAddress' => 'required',
-                'phoneNumber' => 'required',
-                'groups' => 'required',
-                'password' => 'required',
-                'passwordConfirmation' => 'required',
             ]);
+            if($input == true){
+                //success
+            }else{
+                //error
+                $data['validation'] = $this->validator;
+            }
         }
 
 
 
-        return view('create-admins/createAdmins');
+        return view('create-admins/createAdmins', $data);
     }
 }

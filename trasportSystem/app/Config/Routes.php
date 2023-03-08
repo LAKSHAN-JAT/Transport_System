@@ -38,6 +38,7 @@ $routes->post('auth/save_admin', 'Auth::save_admin');
 $routes->post('auth/check_login', 'Auth::check_login');
 $routes->get('auth/logout', 'Auth::logout');
 $routes->get('admins/create', 'Admins::create');
+$routes->post('admins/create', 'Admins::create');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
