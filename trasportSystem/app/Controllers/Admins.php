@@ -10,6 +10,26 @@ class Admins extends BaseController
     }
 
     public function create(){
+
+        $session = \config\Services::session();
+        helper('form');
+
+        if($this->request->getMethod() == 'POST'){
+            $input = $this->validate([
+
+                'image' => 'required',
+                'firstName' => 'required',
+                'lastName' => 'required',
+                'emailAddress' => 'required',
+                'phoneNumber' => 'required',
+                'groups' => 'required',
+                'password' => 'required',
+                'passwordConfirmation' => 'required',
+            ]);
+        }
+
+
+
         return view('create-admins/createAdmins');
     }
 }

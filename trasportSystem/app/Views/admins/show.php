@@ -41,6 +41,9 @@
                                                 <th>Email Address</th>
                                                 <th>Phone</th>
                                                 <th>Group</th>
+                                                <th>status</th>
+                                                <th>Date</th>
+                                                <th width = "200">Manage</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -51,6 +54,13 @@
                                                 <td>61</td>
                                                 <td>2011/04/25</td>
                                                 <td>$320,800</td>
+                                                 <td>$320,800</td>
+                                                  <td>$320,800</td>
+                                                   <td>$320,800</td>
+                                                    <td>
+                                                        <a href="#"  class="btn btn-primary"> <i class="fa fa-edit"></i> Edit</a>  
+                                                      <a href="#"  class="btn btn-danger"><i class="fa fa-trash"> Delete</a>                                                                                                                                                                
+                                                    </td>
                                             </tr>
                                             <tr>
                                                 <td>Garrett Winters</td>

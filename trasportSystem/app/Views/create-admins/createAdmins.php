@@ -36,9 +36,7 @@
                                 <div class="card-body">
                                     <div class="row">                                           
                                         <div class="col-12">
-                                             <?php
-                    echo form_open('auth/save_register');
-                ?>
+                                             <form>
                                                 <div class="form-row">
                                                     <div class="form-group col-md-4">
                                                         <label for="inputfname">First Name</label>
@@ -56,7 +54,7 @@
                                                 
                                                 <div class="form-row">
                                                     <div class="form-group col-md-4">
-                                                        <label for="inputphone">Phone number</label>
+                                                        <label for="inputphone">Phone Number</label>
                                                         <input type="text" class="form-control rounded" id="phone">
                                                     </div>
                                                     <div class="form-group col-md-4">
@@ -87,7 +85,7 @@
                                                 </div>
 
                                                 <button type="submit" class="btn btn-primary"><i class="fa-solid fa-check"></i> Save</button>
-                                               <?php echo form_close();?>
+                                             </form>
                                         </div>
                                     </div>
                                 </div>
