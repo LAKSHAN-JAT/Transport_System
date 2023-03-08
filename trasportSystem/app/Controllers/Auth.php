@@ -147,7 +147,7 @@ class Auth extends BaseController
         session()->remove('name_user');
         session()->remove('level');
         
-        session()->setFlashdata('message', 'Logout Successfull..!!');
+        session()->setFlashdata('message', 'Logout Successful..!!');
             return redirect()->to(base_url('/'));
     }
 

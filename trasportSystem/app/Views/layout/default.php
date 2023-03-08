@@ -17,10 +17,42 @@
 <!-- visite this website 'https://fontawesome.com/' and select you icon is gonna be like that-->
 
   <!-- CSS Libraries -->
+   <!-- START: Template CSS-->
+        <link rel="stylesheet" href="dist\vendors\bootstrap\css\bootstrap.min.css">
+        <link rel="stylesheet" href="dist\vendors\jquery-ui\jquery-ui.min.css">
+        <link rel="stylesheet" href="dist\vendors\jquery-ui\jquery-ui.theme.min.css">
+        <link rel="stylesheet" href="dist\vendors\simple-line-icons\css\simple-line-icons.css">        
+        <link rel="stylesheet" href="dist\vendors\flags-icon\css\flag-icon.min.css"> 
+        <link rel="stylesheet" href="dist\vendors\flag-select\css\flags.css">
+        <!-- END Template CSS-->   
 
+        <!-- START: Page CSS-->
+        <link rel="stylesheet" href="dist\vendors\datatable\css\dataTables.bootstrap4.min.css">
+        <link rel="stylesheet" href="dist\vendors\datatable\buttons\css\buttons.bootstrap4.min.css">
+        <!-- END: Page CSS-->
+
+        <!-- START: Custom CSS-->
+        <link rel="stylesheet" href="dist\css\main.css">
+        <!-- END: Custom CSS-->
   <!-- Template CSS -->
   <link rel="stylesheet" href="<?=base_url()?>/template/template/assets/css/style.css">
   <link rel="stylesheet" href="<?=base_url()?>/template/template/assets/css/components.css">
+
+  <!-- START: Template CSS-->
+        <link rel="stylesheet" href="dist\vendors\bootstrap\css\bootstrap.min.css">
+        <link rel="stylesheet" href="dist\vendors\jquery-ui\jquery-ui.min.css">
+        <link rel="stylesheet" href="dist\vendors\jquery-ui\jquery-ui.theme.min.css">
+        <link rel="stylesheet" href="dist\vendors\simple-line-icons\css\simple-line-icons.css">        
+        <link rel="stylesheet" href="dist\vendors\flags-icon\css\flag-icon.min.css"> 
+        <link rel="stylesheet" href="dist\vendors\flag-select\css\flags.css">
+        <!-- END Template CSS-->      
+
+        <!-- START: Custom CSS-->
+        <link rel="stylesheet" href="dist\css\main.css">
+        <!-- END: Custom CSS-->
+
+
+
 </head>
 
 <body>
@@ -108,7 +140,50 @@
   <!-- Template JS File -->
   <script src="<?=base_url()?>/template/template/assets/js/scripts.js"></script>
   <script src="<?=base_url()?>/template/template/assets/js/custom.js"></script>
+ <!-- START: Template JS-->
+        <script src="dist\vendors\jquery\jquery-3.3.1.min.js"></script>
+        <script src="dist\vendors\jquery-ui\jquery-ui.min.js"></script>
+        <script src="dist\vendors\moment\moment.js"></script>
+        <script src="dist\vendors\bootstrap\js\bootstrap.bundle.min.js"></script>    
+        <script src="dist\vendors\slimscroll\jquery.slimscroll.min.js"></script>
+        <script src="dist\vendors\flag-select\js\jquery.flagstrap.min.js"></script> 
+        <!-- END: Template JS-->
 
+        <!-- START: APP JS-->
+        <script src="dist\js\app.js"></script>
+        <!-- END: APP JS-->
   <!-- Page Specific JS File -->
+
+
+  <!-- START: Template JS-->
+        <script src="dist\vendors\jquery\jquery-3.3.1.min.js"></script>
+        <script src="dist\vendors\jquery-ui\jquery-ui.min.js"></script>
+        <script src="dist\vendors\moment\moment.js"></script>
+        <script src="dist\vendors\bootstrap\js\bootstrap.bundle.min.js"></script>    
+        <script src="dist\vendors\slimscroll\jquery.slimscroll.min.js"></script>
+        <script src="dist\vendors\flag-select\js\jquery.flagstrap.min.js"></script> 
+        <!-- END: Template JS-->
+        
+        <!-- START: APP JS-->
+        <script src="dist\js\app.js"></script>
+        <!-- END: APP JS-->
+
+        <!-- START: Page Vendor JS-->
+        <script src="dist\vendors\datatable\js\jquery.dataTables.min.js"></script> 
+        <script src="dist\vendors\datatable\js\dataTables.bootstrap4.min.js"></script>
+        <script src="dist\vendors\datatable\jszip\jszip.min.js"></script>
+        <script src="dist\vendors\datatable\pdfmake\pdfmake.min.js"></script>
+        <script src="dist\vendors\datatable\pdfmake\vfs_fonts.js"></script>
+        <script src="dist\vendors\datatable\buttons\js\dataTables.buttons.min.js"></script>
+        <script src="dist\vendors\datatable\buttons\js\buttons.bootstrap4.min.js"></script>
+        <script src="dist\vendors\datatable\buttons\js\buttons.colVis.min.js"></script>
+        <script src="dist\vendors\datatable\buttons\js\buttons.flash.min.js"></script>
+        <script src="dist\vendors\datatable\buttons\js\buttons.html5.min.js"></script>
+        <script src="dist\vendors\datatable\buttons\js\buttons.print.min.js"></script>
+        <!-- END: Page Vendor JS-->
+
+        <!-- START: Page Script JS-->        
+        <script src="dist\js\datatable.script.js"></script>
+        <!-- END: Page Script JS-->
 </body>
 </html>
