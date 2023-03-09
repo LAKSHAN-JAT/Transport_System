@@ -34,7 +34,6 @@
                                     <table id="example" class="display table dataTable table-striped table-bordered">
                                         <thead>
                                             <tr>
-                                               <th>#</th>
                                                 <th>Image</th>
                                                 <th>First Name</th>
                                                 <th>Last Name</th>
@@ -45,47 +44,36 @@
                                                 <th>Date</th>
                                                 <th width = "200">Manage</th>
                                             </tr>
+                                            <?php if(!empty($admins)){
+                                                
+                                                foreach($admins as $admin){
+                                                
+                                                
+                                                ?>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>Tiger Nixon</td>
-                                                <td>System Architect</td>
-                                                <td>Edinburgh</td>
-                                                <td>61</td>
-                                                <td>2011/04/25</td>
-                                                <td>$320,800</td>
-                                                 <td>$320,800</td>
-                                                  <td>$320,800</td>
-                                                   <td>$320,800</td>
+                                                <td><?php echo $admin['image']?></td>
+                                                <td><?php echo $admin['firstName']?></td>
+                                                <td><?php echo $admin['lastName']?></td>
+                                                <td><?php echo $admin['email']?></td>
+                                                <td><?php echo $admin['phone']?></td>
+                                             <td><?php echo $admin['groups']?></td>
+                                                 <td><?php echo $admin['Status']?></td>
+                                                   <td><?php echo $admin['Date']?></td>
                                                     <td>
-                                                        <a href="#"  class="btn btn-primary"> <i class="fa fa-edit"></i> Edit</a>  
-                                                      <a href="#"  class="btn btn-danger"><i class="fa fa-trash"> Delete</a>                                                                                                                                                                
+                                                        <a href="<?php echo base_url('admins/edit/'.$admin['id']);?>"  class="btn btn-primary"> <i class="fa fa-edit"></i> Edit</a>
+                                                         <a href="#"  class="btn btn-danger"> <i class="fa fa-trash"></i> Delete</a>
+                                                                                                                                                                                                                   
                                                     </td>
                                             </tr>
-                                            <tr>
-                                                <td>Garrett Winters</td>
-                                                <td>Accountant</td>
-                                                <td>Tokyo</td>
-                                                <td>63</td>
-                                                <td>2011/07/25</td>
-                                                <td>$170,750</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Ashton Cox</td>
-                                                <td>Junior Technical Author</td>
-                                                <td>San Francisco</td>
-                                                <td>66</td>
-                                                <td>2009/01/12</td>
-                                                <td>$86,000</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Cedric Kelly</td>
-                                                <td>Senior Javascript Developer</td>
-                                                <td>Edinburgh</td>
-                                                <td>22</td>
-                                                <td>2012/03/29</td>
-                                                <td>$433,060</td>
-                                            </tr>
+                                            <?php } 
+                                            }
+                                            else{?>
+                                                <tr>
+                                                    <td colspan="9">Records not found</td>
+                                                </tr>
+                                                <?php }?>
                                     </table>
                                 </div>
                             </div>

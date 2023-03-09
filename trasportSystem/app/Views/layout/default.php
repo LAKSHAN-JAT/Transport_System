@@ -185,5 +185,25 @@
         <!-- START: Page Script JS-->        
         <script src="dist\js\datatable.script.js"></script>
         <!-- END: Page Script JS-->
+
+
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script>
+            $(document).ready(function() {
+              <?php if(session()->getFlashdata('status')){?>
+swal({
+  title: "<?=session()->getFlashdata('status')?>",
+  text: "<?=session()->getFlashdata('status_text')?>",
+  icon: "<?=session()->getFlashdata('status_icon')?>",
+  button: "OK",
+});
+                <?php } ?>
+
+              });
+        </script>
+
+
+
+
 </body>
 </html>
