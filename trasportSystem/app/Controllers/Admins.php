@@ -35,13 +35,16 @@ class Admins extends BaseController
                 'address' => 'required',
                 'pass' => 'required',
                 'cpass' => 'required',
-                'image' => 'required',
-                'group' => 'required',
+               // 'image' => 'required',
+                'groups' => 'required',
                 
             ]);
+
             if($input == true){
                 //success
                 $model = new AdminModel();
+                
+             
                 $model->save([
                     'firstName' => $this->request->getPost('firstName'),
                     'lastName' => $this->request->getPost('lastName'),
@@ -50,8 +53,8 @@ class Admins extends BaseController
                     'address' => $this->request->getPost('address'),
                     'pass'=>$this->request->getPost('pass'),
                     'cpass'=>$this->request->getPost('cpass'),
-                    'image' => $this->request->getPost('image'),
-                    'groups' => $this->request->getPost('group'),
+                   // 'image' => $this->request->getPost('image'),
+                    'groups' => $this->request->getPost('groups'),
 
                 ]);
 
@@ -72,64 +75,22 @@ class Admins extends BaseController
     }
 
 
-    public function edit($id){
-          $session = \Config\Services::session();
-        helper('form');
+    
 
-        $model = new AdminModel();
-        $admin = $model->getRow($id);
-
-        if(empty($admin)){
-             session()->setFlashdata('status_text', 'Admin data has been added successfully');
-
-            return redirect()->back();
-        }
-        $data = [];
-
-        if($this->request->getMethod() == 'post'){
-            $input = $this->validate([
-
-                
-                'firstName' => 'required',
-                'lastName' => 'required',
-                'email' => 'required',
-                'phone'=> 'required',
-                'address' => 'required',
-                'pass' => 'required',
-                'cpass' => 'required',
-                'image' => 'required',
-                'group' => 'required',
-                
-            ]);
-            if($input == true){
-                //success
-                $model = new AdminModel();
-                $model->save([
-                    'firstName' => $this->request->getPost('firstName'),
-                    'lastName' => $this->request->getPost('lastName'),
-                    'email' => $this->request->getPost('email'),
-                    'phone' => $this->request->getPost('phone'),
-                    'address' => $this->request->getPost('address'),
-                    'pass'=>$this->request->getPost('pass'),
-                    'cpass'=>$this->request->getPost('cpass'),
-                    'image' => $this->request->getPost('image'),
-                    'groups' => $this->request->getPost('group'),
-
-                ]);
-
-               session()->setFlashdata('status_text', 'Admin data has been added successfully');
-
-                return redirect()->back()
-                ->with('status_icon', 'success')
-                ->with('status', 'New admin Added Successfully!!');
-            }else{
-                //error
-                $data['validation'] = $this->validator;
-            }
-        }
+    public function delete($id = null){
 
 
+        $admin = new AdminModel();
+        $admin ->delete($id);
+        $data = [
 
-        return view('edit-admins/edit', $data);
+            'status' =>"Delete Successfully",
+            'status_text' =>'Admin data has been deleted successfully',
+            'status_icon' =>'success'
+
+        ];
+
+        return $this->response->setJSON($data);
+
     }
 }

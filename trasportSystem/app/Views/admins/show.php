@@ -34,7 +34,7 @@
                                     <table id="example" class="display table dataTable table-striped table-bordered">
                                         <thead>
                                             <tr>
-                                                <th>Image</th>
+                                             
                                                 <th>First Name</th>
                                                 <th>Last Name</th>
                                                 <th>Email Address</th>
@@ -53,7 +53,8 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td><?php echo $admin['image']?></td>
+                                             
+                                             
                                                 <td><?php echo $admin['firstName']?></td>
                                                 <td><?php echo $admin['lastName']?></td>
                                                 <td><?php echo $admin['email']?></td>
@@ -62,8 +63,8 @@
                                                  <td><?php echo $admin['Status']?></td>
                                                    <td><?php echo $admin['Date']?></td>
                                                     <td>
-                                                        <a href="<?php echo base_url('admins/edit/'.$admin['id']);?>"  class="btn btn-primary"> <i class="fa fa-edit"></i> Edit</a>
-                                                         <a href="#"  class="btn btn-danger"> <i class="fa fa-trash"></i> Delete</a>
+                                                        <a href="#"  class="btn btn-primary"> <i class="fa fa-edit"></i> Edit</a>
+                                                         <button type="button" value="<?= $admin['id']; ?>"  class="confirm_del_btn btn btn-danger"> <i class="fa fa-trash"></i> Delete</button>
                                                                                                                                                                                                                    
                                                     </td>
                                             </tr>

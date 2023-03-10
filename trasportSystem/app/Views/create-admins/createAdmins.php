@@ -120,33 +120,20 @@
                                                         
                                                         ?>
                                                 </div>
-                                                <div class="form-group  col-md-4">
-                                                    <label for="inputImage">Image**</label>
-                                                    <input type="file" class="form-control <?php echo (isset($validation) && $validation->hasError('image'))? 'is-invalid' : '';?>" id="image" name="image" value="<?php echo set_value('image')?>">
-                                                    <?php
-                                                                 if(isset($validation) && $validation->hasError('image')){
-                                                                        echo '<p class = "invalid-feedback">'.$validation->getError('image').'</p>';
+                                                   
+
+                                                <div class="form-group col-md-4">
+                                                        <label>Group**</label>
+                                                        <input type="text" class="form-control rounded <?php echo (isset($validation) && $validation->hasError('groups'))? 'is-invalid' : '';?>" id="groups" name = "groups" value="<?php echo set_value('groups')?>">
+                                                        <?php
+                                                                 if(isset($validation) && $validation->hasError('groups')){
+                                                                        echo '<p class = "invalid-feedback">'.$validation->getError('groups').'</p>';
                                                                  }
                                                         
                                                         ?>
-                                                </div>
-
-                                                 <div class="form-group col-md-4">
-                                                        <label for="inputState">Group**</label>
-                                                        <select name = "group" id="group" class="form-control <?php echo (isset($validation) && $validation->hasError('group'))? 'is-invalid' : '';?>" name="group" value="<?php echo set_value('group')?>">
-                                                            <option selected="">Choose...</option>
-                                                            <option value="1">Super Admin</option>
-                                                            <option value="2">Admin</option>
-                                                       </select>
                                                     </div>
-                                                    <?php
-                                                                 if(isset($validation) && $validation->hasError('group')){
-                                                                        echo '<p class = "invalid-feedback">'.$validation->getError('group').'</p>';
-                                                                 }
-                                                        
-                                                        ?>
                                                 </div>
-
+                                                 
                                                 <button type="submit" class="btn btn-primary"><i class="fa-solid fa-check"></i> Save</button>
                                              </form>
                                         </div>

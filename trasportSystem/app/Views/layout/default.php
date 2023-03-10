@@ -98,7 +98,7 @@
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
 
-          <a href="<?=site_url()?>" style="font-size:x-small"> Trasport Management System</a>
+          <a href="https://www.doenets.lk/" style="font-size:x-small"> Trasport Management System</a>
           <img alt="image" src="<?=base_url()?>/template/template/assets/img/avatar/1.jpg" class="rounded-circle" height="80px" width="80px">
           </div>
           <div class="sidebar-brand sidebar-brand-sm">
@@ -204,6 +204,51 @@ swal({
 
 
 
+<script>
+$(document).ready(function() {
+
+  $('.confirm_del_btn').click(function(e){
+
+    e.preventDefault();
+
+    var id = $(this).val();
+
+        swal({
+          title: "Are you sure?",
+          text: "Once deleted, you will not be able to recover this records!",
+          icon: "warning",
+          buttons: true,
+          dangerMode: true,
+        })
+        .then((willDelete) => {
+          if (willDelete) {
+              $.ajax({
+
+                url: "/admin/confirm-delete/"+id,
+                success: function(response) {
+                          swal({
+                  title: response.status,
+                  text: response.status_text,
+                  icon: response.status_icon,
+                  button: "OK",
+                }).then((confirmed) =>{
+
+                  window.location.reload();
+                });
+                }
+              });
+
+          
+          } else {
+            swal("You have cancelled on deleting this data");
+          }
+        });
+
+          });
+        });
+
+</script>
 
 </body>
 </html>
+    

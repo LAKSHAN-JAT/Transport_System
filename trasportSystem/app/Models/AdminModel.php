@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class AdminModel extends Model {
 
     protected $table = 'admins';
-    protected $allowedFields = ['image','firstName', 'lastName', 'email', 'phone', 'group','Status', 'pass', 'cpass', 'Date'];
+    protected $allowedFields = ['id','image','firstName', 'lastName', 'email', 'phone', 'groups','Status', 'pass', 'cpass', 'Date'];
 
 
     public function  getAdmins() {
