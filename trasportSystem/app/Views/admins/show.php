@@ -39,6 +39,7 @@
                                                 <th>Last Name</th>
                                                 <th>Email Address</th>
                                                 <th>Phone</th>
+                                                <th>Address</th>
                                                 <th>Group</th>
                                                 <th>status</th>
                                                 <th>Date</th>
@@ -59,11 +60,12 @@
                                                 <td><?php echo $admin['lastName']?></td>
                                                 <td><?php echo $admin['email']?></td>
                                                 <td><?php echo $admin['phone']?></td>
+                                                  <td><?php echo $admin['address']?></td>
                                              <td><?php echo $admin['groups']?></td>
                                                  <td><?php echo $admin['Status']?></td>
                                                    <td><?php echo $admin['Date']?></td>
                                                     <td>
-                                                        <a href="#"  class="btn btn-primary"> <i class="fa fa-edit"></i> Edit</a>
+                                                        <a href="<?= base_url('admins/edit/'.$admin['id'])?>"  class="btn btn-primary"> <i class="fa fa-edit"></i> Edit</a>
                                                          <button type="button" value="<?= $admin['id']; ?>"  class="confirm_del_btn btn btn-danger"> <i class="fa fa-trash"></i> Delete</button>
                                                                                                                                                                                                                    
                                                     </td>

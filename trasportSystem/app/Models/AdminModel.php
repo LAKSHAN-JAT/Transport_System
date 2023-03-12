@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class AdminModel extends Model {
 
     protected $table = 'admins';
-    protected $allowedFields = ['id','image','firstName', 'lastName', 'email', 'phone', 'groups','Status', 'pass', 'cpass', 'Date'];
+    protected $allowedFields = ['id','image','firstName', 'lastName', 'email', 'phone', 'address','groups','Status', 'pass', 'cpass', 'Date'];
 
 
     public function  getAdmins() {
@@ -15,6 +15,7 @@ class AdminModel extends Model {
         return $this->orderBy('id', 'DESC')->findAll();
 }
 
+ 
    
 }
 ?>

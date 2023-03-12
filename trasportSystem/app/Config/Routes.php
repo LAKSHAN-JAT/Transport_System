@@ -39,6 +39,8 @@ $routes->post('auth/check_login', 'Auth::check_login');
 $routes->get('auth/logout', 'Auth::logout');
 $routes->get('admins/create', 'Admins::create');
 $routes->post('admins/create', 'Admins::create');
+$routes->get('admins/edit/(:num)', 'Admins::edit/$1');
+$routes->post('admins/update/(:num)', 'Admins::update/$1');
 $routes->post('admins/delete', 'Admins::delete');
 $routes->get('admin/confirm-delete/(:num)', 'Admins::delete/$1');
 

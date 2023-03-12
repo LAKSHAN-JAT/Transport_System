@@ -249,6 +249,21 @@ $(document).ready(function() {
 
 </script>
 
+
+      <script>
+            $(document).ready(function() {
+              <?php if(session()->getFlashdata('status')){?>
+swal({
+  title: "<?=session()->getFlashdata('status')?>",
+  text: "<?=session()->getFlashdata('status_text')?>",
+  icon: "<?=session()->getFlashdata('status_icon')?>",
+  button: "OK",
+});
+                <?php } ?>
+
+              });
+        </script>
+
 </body>
 </html>
     

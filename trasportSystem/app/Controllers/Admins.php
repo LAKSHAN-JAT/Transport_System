@@ -60,7 +60,7 @@ class Admins extends BaseController
 
                session()->setFlashdata('status_text', 'Admin data has been added successfully');
 
-                return redirect()->back()
+                return redirect()->to(base_url('admins'))
                 ->with('status_icon', 'success')
                 ->with('status', 'New admin Added Successfully!!');
             }else{
@@ -84,7 +84,7 @@ class Admins extends BaseController
         $admin ->delete($id);
         $data = [
 
-            'status' =>"Delete Successfully",
+            'status' =>"Deleted Successfully",
             'status_text' =>'Admin data has been deleted successfully',
             'status_icon' =>'success'
 
@@ -93,4 +93,39 @@ class Admins extends BaseController
         return $this->response->setJSON($data);
 
     }
+    
+
+       public function edit($id){
+
+        $admin = new AdminModel();
+       $data['admin'] =  $admin->find($id);
+        return view('edit-admins/editeAdmins', $data);
+        
+}
+
+     public function update($id){
+
+
+        
+        $admin = new AdminModel();
+        $data =[
+                    'firstName' => $this->request->getPost('firstName'),
+                    'lastName' => $this->request->getPost('lastName'),
+                    'email' => $this->request->getPost('email'),
+                    'phone' => $this->request->getPost('phone'),
+                    'address' => $this->request->getPost('address'),
+                    'pass'=>$this->request->getPost('pass'),
+                    'cpass'=>$this->request->getPost('cpass'),
+                   // 'image' => $this->request->getPost('image'),
+                    'groups' => $this->request->getPost('groups'),
+        ];
+
+        $admin->update($id, $data);
+        session()->setFlashdata('status_text', 'Admin data has been updated successfully');
+
+                return redirect()->to(base_url('admins'))
+                ->with('status_icon', 'success')
+                ->with('status', 'Admin Updated Successfully!!');
+
+}
 }
