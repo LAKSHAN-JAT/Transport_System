@@ -15,7 +15,5 @@ class AdminModel extends Model {
         return $this->orderBy('id', 'DESC')->findAll();
 }
 
- 
-   
 }
 ?>

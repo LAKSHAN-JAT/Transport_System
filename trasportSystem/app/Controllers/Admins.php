@@ -126,6 +126,9 @@ class Admins extends BaseController
                 return redirect()->to(base_url('admins'))
                 ->with('status_icon', 'success')
                 ->with('status', 'Admin Updated Successfully!!');
+            }
 
-}
+
+ 
+    
 }
