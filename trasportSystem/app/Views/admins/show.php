@@ -5,7 +5,7 @@
 <section class="section">
           <div class="section-header">
             <ul>
-            <h1><i class="fa-solid fa-user"></i> Admins</h1>
+            <h1><i class="fa-solid fa-user"></i> &nbsp;  Admins</h1>
             </ul>
           </div>
 
@@ -15,7 +15,7 @@
                         <div class="sub-header mt-3 py-3 px-3 align-self-center d-sm-flex w-100 rounded">
                             <div class="w-sm-100 mr-auto"><h4 class="mb-0">Information Admins</h4></div>
                                 <div class="btn-group mb-2">
-                                    <a href="<?= base_url('admins/create')?>"><button type="button" class="btn btn-outline-primary rounded-btn btn-lg"><i class="fa-solid fa-plus"></i> Create New</button></a>
+                                    <a href="<?= base_url('admins/create')?>"><button type="button" class="btn btn-outline-primary rounded-btn btn-lg"><i class="fa-solid fa-plus"></i> &nbsp; New</button></a>
                                 </div>
                          </div>
                     </div>
@@ -65,8 +65,8 @@
                                                  <td><?php echo $admin['Status']?></td>
                                                    <td><?php echo $admin['Date']?></td>
                                                     <td>
-                                                        <a href="<?= base_url('admins/edit/'.$admin['id'])?>"  class="btn btn-primary"> <i class="fa fa-edit"></i> Edit</a>
-                                                         <button type="button" value="<?= $admin['id']; ?>"  class="confirm_del_btn btn btn-danger"> <i class="fa fa-trash"></i> Delete</button>
+                                                        <a href="<?= base_url('admins/edit/'.$admin['id'])?>"  class="btn btn-primary"> <i class="fa fa-edit"></i>&nbsp; Edit</a>
+                                                         <button type="button" value="<?= $admin['id']; ?>"  class="confirm_del_btn btn btn-danger"> <i class="fa fa-trash"></i>&nbsp; Delete</button>
                                                                                                                                                                                                                    
                                                     </td>
                                             </tr>

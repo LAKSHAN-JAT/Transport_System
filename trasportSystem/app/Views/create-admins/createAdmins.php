@@ -5,7 +5,7 @@
 <section class="section">
           <div class="section-header">
             <ul>
-            <h1><i class="fa-solid fa-user-plus"></i> Create Admins</h1>
+            <h1><i class="fa-solid fa-user-plus"></i>  &nbsp; Create Admins</h1>
             </ul>
           </div>
 
@@ -19,7 +19,7 @@
                             <div class="w-sm-100 mr-auto"><h4 class="mb-0">Enter Information</h4></div>
 
                               <div class="btn-group mb-2">
-                                    <a href="<?= base_url('admins')?>"><button type="button" class="btn btn-outline-warning rounded-btn btn-medium"><i class="fa-solid fa-undo"></i> Back</button></a>
+                                    <a href="<?= base_url('admins')?>"><button type="button" class="btn btn-outline-warning rounded-btn btn-medium"><i class="fa-solid fa-arrow-left"></i> &nbsp; Back</button></a>
                                 </div>
                          </div>
 
@@ -134,7 +134,7 @@
                                                     </div>
                                                 </div>
                                                  
-                                                <button type="submit" class="btn btn-primary"><i class="fa-solid fa-check"></i> Save</button>
+                                                <button type="submit" class="btn btn-primary"><i class="fa-solid fa-save"></i>&nbsp; Save</button>
                                              </form>
                                         </div>
                                     </div>
