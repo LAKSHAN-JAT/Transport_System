@@ -13,7 +13,7 @@
                 <div class="row ">
                     <div class="col-12  align-self-center">
                         <div class="sub-header mt-3 py-3 px-3 align-self-center d-sm-flex w-100 rounded">
-                            <div class="w-sm-100 mr-auto"><h4 class="mb-0">Information Admins</h4></div>
+                            <div class="w-sm-100 mr-auto"><h4 class="mb-0">Information Admins'</h4></div>
                                 <div class="btn-group mb-2">
                                     <a href="<?= base_url('admins/create')?>"><button type="button" class="btn btn-outline-primary rounded-btn btn-lg"><i class="fa-solid fa-plus"></i> &nbsp; New</button></a>
                                 </div>
@@ -41,7 +41,7 @@
                                                 <th>Phone</th>
                                                 <th>Address</th>
                                                 <th>Group</th>
-                                                <th>status</th>
+                                                <th>Status</th>
                                                 <th>Date</th>
                                                 <th width = "200">Manage</th>
                                             </tr>
