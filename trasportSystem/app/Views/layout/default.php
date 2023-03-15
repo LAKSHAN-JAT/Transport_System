@@ -99,7 +99,7 @@
           <div class="sidebar-brand">
 
           <a href="https://www.doenets.lk/" style="font-size:x-small"> Transport Management System</a>
-          <img alt="image" src="<?=base_url()?>/template/template/assets/img/avatar/1.jpg" class="rounded-circle" height="80px" width="80px">
+          <img alt="image" src="<?=base_url()?>/template/template/assets/img/avatar/1.jpg" class="shadow p-3 mb-5 bg-body rounded-circle" height="100px" width="100px">
           </div>
           <div class="sidebar-brand sidebar-brand-sm">
             <a href="<?=site_url()?>"><img alt="image" src="<?=base_url()?>/template/template/assets/img/avatar/1.jpg" class="rounded-circle" height="50px" width="50px">TMS</a>
@@ -226,7 +226,6 @@ $(document).ready(function() {
               $.ajax({
 
                 url: "/admin/confirm-delete/"+id,
-                url: "/staff/confirm-delete/"+id,
                 success: function(response) {
                           swal({
                   title: response.status,
@@ -251,7 +250,51 @@ $(document).ready(function() {
 
 </script>
 
+<script>
+$(document).ready(function() {
 
+  $('.confirm_del_staff_btn').click(function(e){
+
+    e.preventDefault();
+
+    var id = $(this).val();
+
+        swal({
+          title: "Are you sure?",
+          text: "Once deleted, you will not be able to recover this records!",
+          icon: "warning",
+          buttons: true,
+          dangerMode: true,
+        })
+        .then((willDelete) => {
+          if (willDelete) {
+              $.ajax({
+
+                
+                url: "/staff/confirm-delete/"+id,
+                success: function(response) {
+                          swal({
+                  title: response.status,
+                  text: response.status_text,
+                  icon: response.status_icon,
+                  button: "OK",
+                }).then((confirmed) =>{
+
+                  window.location.reload();
+                });
+                }
+              });
+
+          
+          } else {
+            swal("You have cancelled on deleting this data");
+          }
+        });
+
+          });
+        });
+
+</script>
     
 </body>
 </html>
