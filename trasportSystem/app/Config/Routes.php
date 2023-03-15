@@ -39,11 +39,18 @@ $routes->post('auth/check_login', 'Auth::check_login');
 $routes->get('auth/logout', 'Auth::logout');
 $routes->get('admins/create', 'Admins::create');
 $routes->post('admins/create', 'Admins::create');
+$routes->get('staff/create', 'Staff::create');
+$routes->post('staff/create', 'Staff::create');
 $routes->get('admins/edit/(:num)', 'Admins::edit/$1');
 $routes->post('admins/update/(:num)', 'Admins::update/$1');
 $routes->post('admins/delete', 'Admins::delete');
+$routes->post('staff/delete', 'Staff::delete');
+$routes->get('staff/confirm-delete/(:num)', 'Staff::delete/$1');
 $routes->get('admin/confirm-delete/(:num)', 'Admins::delete/$1');
-
+$routes->get('vehicles', 'Vehicles::index');
+$routes->get('staff', 'Staff::index');
+$routes->get('visitors', 'Visitors::index');
+$routes->get('drivers', 'Drivers::index');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

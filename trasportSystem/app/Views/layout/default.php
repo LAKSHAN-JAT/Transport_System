@@ -98,7 +98,7 @@
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
 
-          <a href="https://www.doenets.lk/" style="font-size:x-small"> Trasport Management System</a>
+          <a href="https://www.doenets.lk/" style="font-size:x-small"> Transport Management System</a>
           <img alt="image" src="<?=base_url()?>/template/template/assets/img/avatar/1.jpg" class="rounded-circle" height="80px" width="80px">
           </div>
           <div class="sidebar-brand sidebar-brand-sm">
@@ -188,6 +188,7 @@
 
 
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        
         <script>
             $(document).ready(function() {
               <?php if(session()->getFlashdata('status')){?>
@@ -225,6 +226,7 @@ $(document).ready(function() {
               $.ajax({
 
                 url: "/admin/confirm-delete/"+id,
+                url: "/staff/confirm-delete/"+id,
                 success: function(response) {
                           swal({
                   title: response.status,
@@ -250,20 +252,7 @@ $(document).ready(function() {
 </script>
 
 
-      <script>
-            $(document).ready(function() {
-              <?php if(session()->getFlashdata('status')){?>
-swal({
-  title: "<?=session()->getFlashdata('status')?>",
-  text: "<?=session()->getFlashdata('status_text')?>",
-  icon: "<?=session()->getFlashdata('status_icon')?>",
-  button: "OK",
-});
-                <?php } ?>
-
-              });
-        </script>
-
+    
 </body>
 </html>
     

@@ -31,7 +31,7 @@ class Admins extends BaseController
                 'firstName' => 'required',
                 'lastName' => 'required',
                 'email' => 'trim|required|valid_email',
-                'phone'=> 'required|max_length[10]',
+                'phone'=> 'required|max_length[10]|min_length[10]',
                 'address' => 'required',
                 'pass' => 'required',
                 'cpass' => 'required|matches[pass]',
