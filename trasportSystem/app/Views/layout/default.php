@@ -78,7 +78,7 @@
               <div class="dropdown-title text-center text-lowercase"><?= session()->get('email')?><br/>
               <div class="dropdown-title text-center">
               <?php if (session()->get('level') ==1){
-                echo 'Admin';
+                echo 'Brach Manager';
               } else {
                 echo 'User';
               }
