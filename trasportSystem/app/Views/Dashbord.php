@@ -15,8 +15,8 @@
                     <div class="col-12 col-sm-6 col-xl-3 mt-3">
                         <div class="card shadow p-3 mb-5 bg-body rounded">
                             <div class="card-body">
-                                <img src="<?=base_url()?>/template/template/assets/img/avatar/Admin.png" class="rounded-circle" alt="admins" class="float-right" width="50" height="50" align = "right">
-                                <h6 class="card-title font-weight-bold">Total Registered</h6>
+                                <img src="<?=base_url()?>/template/template/assets/img/avatar/Admin.jpg" class="rounded-circle-lg" alt="admins" class="float-right" width="50" height="50" align = "right">
+                                <h6 class="card-title font-weight-bold">Registered</h6>
                                 <h6 class="card-subtitle mb-2 text-muted"><a href="<?= base_url('admins')?>">ADMINS</a></h6>
                                  <div class="h5 mb-0 font-weight-bold text-gray-800">
 
@@ -38,7 +38,7 @@
                    <div class="col-12 col-sm-6 col-xl-3 mt-3">
                         <div class="card shadow p-3 mb-5 bg-body rounded">
                             <div class="card-body">
-                                 <img src="<?=base_url()?>/template/template/assets/img/avatar/users5.png" class="rounded-circle" alt="admins" class="float-right" width="50" height="50" align = "right">
+                                 <img src="<?=base_url()?>/template/template/assets/img/avatar/users.jpg" class="rounded-circle-lg" alt="member" class="float-right" width="50" height="50" align = "right">
                                 <h6 class="card-title font-weight-bold">Registered Staff</h6>
                                 <h6 class="card-subtitle mb-2 text-muted"><a href="<?= base_url('staff')?>">MEMBERS</a></h6>
                                
@@ -59,26 +59,26 @@
                             </div>
                         </div>
                     </div>
-                   <!-- <div class="col-12 col-sm-6 col-xl-3 mt-3">
-                        <div class="card shadow p-3 mb-5 bg-body rounded">
-                            <div class="card-body">
-                                <img src="dist\images\money.png" alt="money" class="float-right">
-                                <h6 class="card-title font-weight-bold">Total Sale</h6>
-                                <h6 class="card-subtitle mb-2 text-muted">Last Months</h6>
-                                <h2>$38,524</h2>
-                            </div>
-                        </div>
-                    </div>
                     <div class="col-12 col-sm-6 col-xl-3 mt-3">
                         <div class="card shadow p-3 mb-5 bg-body rounded">
                             <div class="card-body">
-                                <img src="dist\images\wallet.png" alt="wallet" class="float-right">
-                                <h6 class="card-title font-weight-bold">Total Profit</h6>
-                                <h6 class="card-subtitle mb-2 text-muted">In February-2019</h6>
-                                <h2>$78,245 </h2>
+                                <img src="<?=base_url()?>/template/template/assets/img/avatar/visitors.jpeg" class="rounded-circle-lg" alt="admins" class="float-right" width="50" height="50" align = "right">
+                                <h6 class="card-title font-weight-bold">Registered</h6>
+                                <h6 class="card-subtitle mb-2 text-muted"><a href="<?= base_url('visitors')?>">VISITORS</h6></a>
+                                <h2>DEMO</h2>
                             </div>
                         </div>
-</div>-->
+                    </div>
+                   <div class="col-12 col-sm-6 col-xl-3 mt-3">
+                        <div class="card shadow p-3 mb-5 bg-body rounded">
+                            <div class="card-body">
+                               <img src="<?=base_url()?>/template/template/assets/img/avatar/driver.jpg" class="rounded-circle-lg" alt="driver" class="float-right" width="50" height="50" align = "right">
+                                <h6 class="card-title font-weight-bold">Registered</h6>
+                                <h6 class="card-subtitle mb-2 text-muted"><a href="<?= base_url('drivers')?>">DRIVERS</h6></a>
+                                <h2>DEMO</h2>
+                            </div>
+                        </div>
+</div>
 
                     
         </section>
