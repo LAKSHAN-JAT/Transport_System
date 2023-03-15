@@ -10,7 +10,7 @@
           </div>
 
           <div class="section-body">
-            Show
+             <img alt="image" src="<?=base_url()?>/template/template/assets/img/avatar/1.webp" class="rounded-circle mr-1">
           </div>
         </section>
 
