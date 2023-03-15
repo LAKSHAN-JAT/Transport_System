@@ -42,6 +42,8 @@ $routes->post('admins/create', 'Admins::create');
 $routes->get('staff/create', 'Staff::create');
 $routes->post('staff/create', 'Staff::create');
 $routes->get('admins/edit/(:num)', 'Admins::edit/$1');
+$routes->get('staff/edit/(:num)', 'Staff::edit/$1');
+$routes->post('staff/update/(:num)', 'Staff::update/$1');
 $routes->post('admins/update/(:num)', 'Admins::update/$1');
 $routes->post('admins/delete', 'Admins::delete');
 $routes->post('staff/delete', 'Staff::delete');

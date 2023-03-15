@@ -90,4 +90,36 @@ class Staff extends BaseController
         return $this->response->setJSON($data);
 
     }
+
+         public function edit($id){
+
+        $staff = new StaffModel();
+        $data['staff'] =  $staff->find($id);
+        return view('staff/edit', $data);
+        
+}
+
+ public function update($id){
+
+
+        
+        $staff = new StaffModel();
+        $data =[
+                    'name' => $this->request->getPost('name'),
+                    'nic' => $this->request->getPost('nic'),
+                    'branch' => $this->request->getPost('branch'),
+                    'contact_no' => $this->request->getPost('contact_no'),
+                    'photo' => $this->request->getPost('photo'),
+                    'employee_no'=>$this->request->getPost('employee_no'),
+                    'finger_print_no'=>$this->request->getPost('finger_print_no'),
+                   'address' => $this->request->getPost('address'),
+        ];
+
+        $staff->update($id, $data);
+        session()->setFlashdata('status_text', 'staff member data has been updated successfully');
+
+                return redirect()->to(base_url('staff'))
+                ->with('status_icon', 'success')
+                ->with('status', 'staff Updated Successfully!!');
+            }
 }

@@ -5,7 +5,7 @@
 <section class="section">
           <div class="section-header">
             <ul>
-            <h1><i class="fa-solid fa-user-plus"></i>  &nbsp; Edit Admins</h1>
+            <h1><i class="fa-solid fa-user-edit"></i>  &nbsp; Edit Admins</h1>
             </ul>
           </div>
 

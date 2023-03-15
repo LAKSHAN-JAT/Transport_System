@@ -67,7 +67,7 @@
                                                   <td><?php echo $staff['address']?></td>
                                                    <td><?php echo $staff['date']?></td>
                                                     <td>
-                                                        <a href="#"  class="btn btn-primary"> <i class="fa fa-edit"></i>&nbsp; Edit</a>
+                                                        <a href="<?= base_url('staff/edit/'.$staff['id'])?>"  class="btn btn-primary"> <i class="fa fa-edit"></i>&nbsp; Edit</a>
                                                          <button type="button" value="<?= $staff['id']; ?>"  class="confirm_del_btn btn btn-danger"> <i class="fa fa-trash"></i>&nbsp; Delete</button>
                                                                                                                                                                                                                    
                                                     </td>
