@@ -59,6 +59,19 @@ $routes->post('visitor/delete', 'Visitors::deleteVisitor');
 $routes->get('visitor/confirm-delete/(:num)', 'Visitors::deleteVisitor/$1');
 $routes->get('visitor/edit/(:num)', 'Visitors::edit/$1');
 $routes->post('visitor/update/(:num)', 'Visitors::update/$1');
+$routes->post('driver/delete', 'Drivers::deleteDriver');
+$routes->get('driver/confirm-delete/(:num)', 'Drivers::deleteDriver/$1');
+$routes->get('driver/create', 'Drivers::createDriver');
+$routes->post('driver/create', 'Drivers::createDriver');
+$routes->get('driver/edit/(:num)', 'Drivers::edit/$1');
+$routes->post('driver/update/(:num)', 'Drivers::update/$1');
+$routes->post('vehicles/delete', 'Vehicles::delete');
+$routes->get('vehicles/confirm-delete/(:num)', 'Vehicles::delete/$1');
+$routes->get('vehicle/create', 'Vehicles::create');
+$routes->post('vehicle/create', 'Vehicles::create');
+$routes->get('vehicle/edit/(:num)', 'Vehicles::edit/$1');
+$routes->post('vehicle/update/(:num)', 'Vehicles::update/$1');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

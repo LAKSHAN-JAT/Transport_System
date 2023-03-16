@@ -11,9 +11,9 @@ class Visitors extends BaseController
         $data['session'] = $session;
 
         $model = new VisitorsModel();
-        $adminsArray= $model -> getVisitors();
+        $visitorArray= $model -> getVisitors();
 
-        $data['visitors'] = $adminsArray;
+        $data['visitors'] = $visitorArray;
         return view('visitors/show', $data);
     }
 
