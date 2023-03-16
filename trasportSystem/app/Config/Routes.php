@@ -53,6 +53,12 @@ $routes->get('vehicles', 'Vehicles::index');
 $routes->get('staff', 'Staff::index');
 $routes->get('visitors', 'Visitors::index');
 $routes->get('drivers', 'Drivers::index');
+$routes->get('visitors/create', 'Visitors::createVisitor');
+$routes->post('visitors/create', 'Visitors::createVisitor');
+$routes->post('visitor/delete', 'Visitors::deleteVisitor');
+$routes->get('visitor/confirm-delete/(:num)', 'Visitors::deleteVisitor/$1');
+$routes->get('visitor/edit/(:num)', 'Visitors::edit/$1');
+$routes->post('visitor/update/(:num)', 'Visitors::update/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

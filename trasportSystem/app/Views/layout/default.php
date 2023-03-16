@@ -295,6 +295,52 @@ $(document).ready(function() {
         });
 
 </script>
+
+<script>
+$(document).ready(function() {
+
+  $('.confirm_del_visitor_btn').click(function(e){
+
+    e.preventDefault();
+
+    var id = $(this).val();
+
+        swal({
+          title: "Are you sure?",
+          text: "Once deleted, you will not be able to recover this records!",
+          icon: "warning",
+          buttons: true,
+          dangerMode: true,
+        })
+        .then((willDelete) => {
+          if (willDelete) {
+              $.ajax({
+
+                
+                url: "visitor/confirm-delete/"+id,
+                success: function(response) {
+                          swal({
+                  title: response.status,
+                  text: response.status_text,
+                  icon: response.status_icon,
+                  button: "OK",
+                }).then((confirmed) =>{
+
+                  window.location.reload();
+                });
+                }
+              });
+
+          
+          } else {
+            swal("You have cancelled on deleting this data");
+          }
+        });
+
+          });
+        });
+
+</script>
     
 </body>
 </html>
