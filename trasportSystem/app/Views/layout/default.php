@@ -390,7 +390,7 @@ $(document).ready(function() {
 <script>
 $(document).ready(function() {
 
-  $('.confirm_del_vehicle_btn').click(function(e){
+  $('.confirm_del_driver_btn').click(function(e){
 
     e.preventDefault();
 
@@ -408,7 +408,7 @@ $(document).ready(function() {
               $.ajax({
 
                 
-                url: "vehicles/confirm-delete/"+id,
+                url: "driver/confirm-delete/"+id,
                 success: function(response) {
                           swal({
                   title: response.status,
