@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 use App\Models\StaffModel;
+use CodeIgniter\HTTP\Request;
 
 class Staff extends BaseController
 {
@@ -49,7 +50,7 @@ class Staff extends BaseController
                     'nic' => $this->request->getPost('nic'),
                     'branch' => $this->request->getPost('branch'),
                     'contact_no' => $this->request->getPost('contact_no'),
-                    'photo' => $this->request->getPost('photo'),
+                    //'photo' => $imageName,
                     'employee_no'=>$this->request->getPost('employee_no'),
                     'finger_print_no'=>$this->request->getPost('finger_print_no'),
                    'address' => $this->request->getPost('address'),
@@ -72,8 +73,7 @@ class Staff extends BaseController
         return view('staff/create-staff', $data);
     }
 
-
-    
+   
     public function delete($id = null){
 
 

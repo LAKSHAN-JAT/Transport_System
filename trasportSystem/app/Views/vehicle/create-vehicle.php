@@ -5,7 +5,7 @@
 <section class="section">
           <div class="section-header">
             <ul>
-            <h1><i class="fa-solid fa-car"></i>  &nbsp; Create Vehicle</h1>
+            <h1><i class="fa-solid fa-car"></i><i class="fa-solid fa-plus"></i>  &nbsp; Create Vehicle</h1>
             </ul>
           </div>
 

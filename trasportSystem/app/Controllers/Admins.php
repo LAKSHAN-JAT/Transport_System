@@ -103,7 +103,7 @@ class Admins extends BaseController
         
 }
 
-     public function update($id){
+public function update($id){
 
 
         
@@ -127,8 +127,4 @@ class Admins extends BaseController
                 ->with('status_icon', 'success')
                 ->with('status', 'Admin Updated Successfully!!');
             }
-
-
- 
-    
 }

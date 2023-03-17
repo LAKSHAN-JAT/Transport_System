@@ -14,6 +14,5 @@ class StaffModel extends Model {
 
         return $this->orderBy('id', 'DESC')->findAll();
 }
-
 }
 ?>

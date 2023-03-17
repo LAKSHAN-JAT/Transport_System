@@ -72,19 +72,12 @@
         
          <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
             <img alt="image" src="<?=base_url()?>/template/template/assets/img/avatar/avatar-1.png" class="rounded-circle mr-1"> &nbsp;
-            <div class="d-sm-none d-lg-inline-block"><?= session()->get('name_user')?></div></a>
+            <div class="d-sm-none d-lg-inline-block"><?= session()->get('emp_no ')?></div></a>
             <div class="dropdown-menu dropdown-menu-right">
               <div class="dropdown-title text-center text-lowercase"><?= session()->get('email')?><br/>
               <div class="dropdown-title text-center">
-              <?php if (session()->get('level') ==1){
-                echo 'Brach Manager';
-              } else {
-                echo 'User';
-              }
-            ?>
               </div>
-            </div>
-              
+            </div> 
               <div class="dropdown-divider"></div>
               <a href="<?= base_url('auth/logout')?>" class="dropdown-item has-icon text-danger">
                 <i class="fas fa-sign-out-alt"></i> Logout
@@ -362,7 +355,7 @@ $(document).ready(function() {
               $.ajax({
 
                 
-                url: "vehicles/confirm-delete/"+id,
+                url: "vehicle/confirm-delete/"+id,
                 success: function(response) {
                           swal({
                   title: response.status,

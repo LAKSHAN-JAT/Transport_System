@@ -10,12 +10,12 @@
             $this->db->table('users')->insert($data);
         }
 
-        public function login($email, $passowrd){
+        public function login($emp_no){
 
             return $this->db->table('users')->where([
 
-                'email' => $email,
-                'passowrd' => $passowrd
+                'emp_no' => $emp_no ,
+                
             ])->get()->getRowArray();
 
         }

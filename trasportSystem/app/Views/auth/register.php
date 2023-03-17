@@ -47,13 +47,11 @@ void 0===window.kintMicrotimeInitialized&&(window.kintMicrotimeInitialized=1,win
         <div class="row">
           <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
             <div class="login-brand">
-            <img alt="image" src="http://localhost:8080/template/template/assets/img/avatar/avatar-1.png" width="100" class="rounded-circle">
+            <img alt="image" src="http://localhost:8080/template/template/assets/img/avatar/Admin.jpg" width="100" class="rounded-circle">
             </div>
 
-            <div class="card card-primary">
-              <div class="card-header"><h4> <i class="fa-solid fa-star"></i>  Admin Registration!</h4></div>
-              <div class="card-body">
-     <?php 
+            <div class="card card-primary shadow p-3 mb-5 bg-body rounded">
+                 <?php 
      $errors= session()->getFlashdata('errors');
      if(!empty($errors)) {?>
      <div class="alert alert-danger" role="alert">
@@ -71,14 +69,15 @@ void 0===window.kintMicrotimeInitialized&&(window.kintMicrotimeInitialized=1,win
       echo '</div>';
     }
        ?>
-
-
+              <div class="card-header"><h4> <i class="fa-solid fa-star"></i>  Admin Registration!</h4></div>
+              <div class="card-body">
+  
                 <?php
                     echo form_open('auth/save_register');
                 ?>
                   <div class="form-group">
-                    <label for="name_user">User name</label>
-                    <input id="name_user" type="text" class="form-control" name="name_user" tabindex="1">
+                    <label for="name_user">Employee Number</label>
+                    <input id="name_user" type="text" class="form-control" name="emp_no" tabindex="1">
                     <div class="invalid-feedback">
                       Please fill in your user name
                     </div>

@@ -38,11 +38,11 @@ class Auth extends BaseController
     public function save_register(){
 
         if($this->validate([
-            'name_user' =>[
-                'label' => 'Name User',
+            'emp_no' =>[
+                'label' => 'Employee number',
                 'rules' =>'required',
                 'errors' =>[
-                     'required' => 'Name User is required'
+                     'required' => 'Employee Number is required'
                 ]
 
                 ],
@@ -80,11 +80,10 @@ class Auth extends BaseController
                 ],
         ])){
             $data  = array(
-                'name_user'=> $this->request->getPost('name_user'),
+                'emp_no'=> $this->request->getPost('emp_no'),
                 'email'=> $this->request->getPost('email'),
                 'tel_no'=> $this->request->getPost('tel_no'),
-                'passowrd'=> $this->request->getPost('passowrd'),
-                'level'=> null
+                'passowrd'=> $this->request->getPost('passowrd')
             );
             $this->ModelAuth->save_register($data);
             session()->setFlashdata('message', 'Registration successful!!');
@@ -102,36 +101,27 @@ class Auth extends BaseController
     public function check_login(){
 
         if($this->validate([
-             'email' =>[
-                'label' => 'E-Mail',
+             'emp_no' =>[
+                'label' => 'Employee No',
                 'rules' =>'required',
                 'errors' =>[
-                     'required' => 'User Email  is required'
+                     'required' => 'Employee number is required'
                 ]
 
-                ],
-                  'passowrd' =>[
-                'label' => 'Password',
-                'rules' =>'required',
-                'errors' =>[
-                     'required' => 'Password  is required'
                 ]
-                ],
         ])){
-            $email = $this->request->getPost('email');
-            $passowrd = $this->request->getPost('passowrd');
-            $check = $this->ModelAuth->login($email, $passowrd);
+            $emp_no = $this->request->getPost('emp_no');
+            $check = $this->ModelAuth->login($emp_no);
             if($check){
 
                 session()->set('log', true);
-                session()->set('name_user', $check['name_user']);
+                session()->set('emp_no', $check['emp_no']);
                 session()->set('email', $check['email']);
-                session()->set('level', $check['level']);
 
                 return redirect()->to(base_url('dashboard'));
         }else{
 
-            session()->setFlashdata('message', 'Email or password incorrect..!!');
+            session()->setFlashdata('message', 'Employee number is incorrect..!!');
             return redirect()->back();
             
         }
@@ -144,8 +134,7 @@ class Auth extends BaseController
 
     public function logout(){
         session()->remove('log');
-        session()->remove('name_user');
-        session()->remove('level');
+        session()->remove('emp_no');
         
         session()->setFlashdata('message', 'Logout Successful..!!');
             return redirect()->to(base_url('/'));

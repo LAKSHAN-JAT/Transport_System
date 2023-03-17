@@ -5,7 +5,7 @@
 <section class="section">
           <div class="section-header">
             <ul>
-            <h1><i class="fa-solid fa-user-plus"></i>  &nbsp; Create Staff</h1>
+            <h1><i class="fa-solid fa-users"></i><i class="fa-solid fa-plus"></i>  &nbsp; Create Staff</h1>
             </ul>
           </div>
 
@@ -85,7 +85,7 @@
                                                         ?>
                                                     </div>
                                                     <div class="form-group col-md-4">
-                                                        <label for="inputAddress">Photo**</label>
+                                                        <label for="inputAddress">Photo(.jpg,jpeg,png,gif)**</label>
                                                         <input type="file" class="form-control <?php echo (isset($validation) && $validation->hasError('photo'))? 'is-invalid' : '';?>" id="photo" name="photo" value="<?php echo set_value('photo')?>">
 
                                                         <?php

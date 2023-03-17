@@ -5,7 +5,7 @@
 <section class="section">
           <div class="section-header">
             <ul>
-            <h1><i class="fa-solid fa-user-plus"></i>  &nbsp; Create Visitors</h1>
+            <h1><i class="fa-solid fa-user-tie"></i><i class="fa-solid fa-plus"></i>  &nbsp; Create Visitors</h1>
             </ul>
           </div>
 
