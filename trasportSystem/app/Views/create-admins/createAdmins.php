@@ -45,7 +45,7 @@
                                                 <div class="form-row">
                                                     <div class="form-group col-md-4">
                                                         <label>First Name**</label>
-                                                        <input type="text" class="form-control rounded <?php echo (isset($validation) && $validation->hasError('firstName'))? 'is-invalid' : '';?>" id="firstName" name = "firstName" value="<?php echo set_value('firstName')?>">
+                                                        <input type="text" class="form-control border border-info rounded <?php echo (isset($validation) && $validation->hasError('firstName'))? 'is-invalid' : '';?>" id="firstName" name = "firstName" value="<?php echo set_value('firstName')?>">
                                                         <?php
                                                                  if(isset($validation) && $validation->hasError('firstName')){
                                                                         echo '<p class = "invalid-feedback">'.$validation->getError('firstName').'</p>';
@@ -55,7 +55,7 @@
                                                     </div>
                                                     <div class="form-group col-md-4">
                                                         <label for="inputlname">Last Name**</label>
-                                                        <input type="text" class="form-control <?php echo (isset($validation) && $validation->hasError('lastName'))? 'is-invalid' : '';?>" id="lastName" name= "lastName"value="<?php echo set_value('lastName')?>">
+                                                        <input type="text" class="form-control border border-info <?php echo (isset($validation) && $validation->hasError('lastName'))? 'is-invalid' : '';?>" id="lastName" name= "lastName"value="<?php echo set_value('lastName')?>">
 
                                                          <?php
                                                                  if(isset($validation) && $validation->hasError('lastName')){
@@ -66,7 +66,7 @@
                                                     </div>
                                                     <div class="form-group  col-md-4">
                                                     <label for="inputeAddress">Email Address**</label>
-                                                    <input type="text" class="form-control <?php echo (isset($validation) && $validation->hasError('email'))? 'is-invalid' : '';?>" id="email" name="email" value="<?php echo set_value('email')?>">
+                                                    <input type="text" class="form-control border border-info <?php echo (isset($validation) && $validation->hasError('email'))? 'is-invalid' : '';?>" id="email" name="email" value="<?php echo set_value('email')?>">
                                                      <?php
                                                                  if(isset($validation) && $validation->hasError('email')){
                                                                         echo '<p class = "invalid-feedback">'.$validation->getError('email').'</p>';
@@ -79,7 +79,7 @@
                                                 <div class="form-row">
                                                     <div class="form-group col-md-4">
                                                         <label for="inputphone">Phone Number**</label>
-                                                        <input type="text" class="form-control rounded <?php echo (isset($validation) && $validation->hasError('phone'))? 'is-invalid' : '';?>" id="phone" name="phone" value="<?php echo set_value('phone')?>">
+                                                        <input type="text" class="form-control border border-info rounded border border-info <?php echo (isset($validation) && $validation->hasError('phone'))? 'is-invalid' : '';?>" id="phone" name="phone" value="<?php echo set_value('phone')?>">
 
                                                         <?php
                                                                  if(isset($validation) && $validation->hasError('phone')){
@@ -90,7 +90,7 @@
                                                     </div>
                                                     <div class="form-group col-md-4">
                                                         <label for="inputAddress">Address**</label>
-                                                        <input type="text" class="form-control <?php echo (isset($validation) && $validation->hasError('address'))? 'is-invalid' : '';?>" id="address" name="address" value="<?php echo set_value('address')?>">
+                                                        <input type="text" class="form-control border border-info <?php echo (isset($validation) && $validation->hasError('address'))? 'is-invalid' : '';?>" id="address" name="address" value="<?php echo set_value('address')?>">
 
                                                         <?php
                                                                  if(isset($validation) && $validation->hasError('address')){
@@ -101,7 +101,7 @@
                                                     </div>
                                                     <div class="form-group  col-md-4">
                                                     <label for="inputpass">Password**</label>
-                                                    <input type="password" class="form-control <?php echo (isset($validation) && $validation->hasError('pass'))? 'is-invalid' : '';?>" id="pass" name="pass" value="<?php echo set_value('pass')?>">
+                                                    <input type="password" class="form-control border border-info <?php echo (isset($validation) && $validation->hasError('pass'))? 'is-invalid' : '';?>" id="pass" name="pass" value="<?php echo set_value('pass')?>">
 
                                                     <?php
                                                                  if(isset($validation) && $validation->hasError('pass')){
@@ -112,7 +112,7 @@
                                                 </div>
                                                  <div class="form-group  col-md-4">
                                                     <label for="inputcpass">Confirm Password**</label>
-                                                    <input type="password" class="form-control <?php echo (isset($validation) && $validation->hasError('cpass'))? 'is-invalid' : '';?>" id="cpass" name="cpass" value="<?php echo set_value('cpass')?>">
+                                                    <input type="password" class="form-control border border-info <?php echo (isset($validation) && $validation->hasError('cpass'))? 'is-invalid' : '';?>" id="cpass" name="cpass" value="<?php echo set_value('cpass')?>">
                                                     <?php
                                                                  if(isset($validation) && $validation->hasError('cpass')){
                                                                         echo '<p class = "invalid-feedback">'.$validation->getError('cpass').'</p>';
@@ -124,7 +124,7 @@
 
                                                 <div class="form-group col-md-4">
                                                         <label>Group**</label>
-                                                        <input type="text" class="form-control rounded <?php echo (isset($validation) && $validation->hasError('groups'))? 'is-invalid' : '';?>" id="groups" name = "groups" value="<?php echo set_value('groups')?>">
+                                                        <input type="text" class="form-control border border-info rounded <?php echo (isset($validation) && $validation->hasError('groups'))? 'is-invalid' : '';?>" id="groups" name = "groups" value="<?php echo set_value('groups')?>">
                                                         <?php
                                                                  if(isset($validation) && $validation->hasError('groups')){
                                                                         echo '<p class = "invalid-feedback">'.$validation->getError('groups').'</p>';

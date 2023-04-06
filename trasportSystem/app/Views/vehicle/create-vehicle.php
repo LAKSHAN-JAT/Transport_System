@@ -41,7 +41,7 @@
                                                 <div class="form-row">
                                                     <div class="form-group col-md-4">
                                                         <label>License Plate No**</label>
-                                                        <input type="text" class="form-control rounded <?php echo (isset($validation) && $validation->hasError('license_plate_no'))? 'is-invalid' : '';?>" id="license_plate_no" name = "license_plate_no" value="<?php echo set_value('license_plate_no')?>">
+                                                        <input type="text" class="form-control border border-info rounded <?php echo (isset($validation) && $validation->hasError('license_plate_no'))? 'is-invalid' : '';?>" id="license_plate_no" name = "license_plate_no" value="<?php echo set_value('license_plate_no')?>">
                                                         <?php
                                                                  if(isset($validation) && $validation->hasError('license_plate_no')){
                                                                         echo '<p class = "invalid-feedback">'.$validation->getError('license_plate_no').'</p>';
@@ -51,7 +51,7 @@
                                                     </div>
                                                     <div class="form-group col-md-4">
                                                         <label for="inputlname">Chassis No**</label>
-                                                        <input type="text" class="form-control <?php echo (isset($validation) && $validation->hasError('chassis_no'))? 'is-invalid' : '';?>" id="chassis_no" name= "chassis_no"value="<?php echo set_value('chassis_no')?>">
+                                                        <input type="text" class="form-control border border-info <?php echo (isset($validation) && $validation->hasError('chassis_no'))? 'is-invalid' : '';?>" id="chassis_no" name= "chassis_no"value="<?php echo set_value('chassis_no')?>">
 
                                                          <?php
                                                                  if(isset($validation) && $validation->hasError('chassis_no')){
@@ -62,7 +62,7 @@
                                                     </div>
                                                     <div class="form-group  col-md-4">
                                                     <label for="inputeAddress">Engine No**</label>
-                                                    <input type="text" class="form-control <?php echo (isset($validation) && $validation->hasError('engine_no'))? 'is-invalid' : '';?>" id="engine_no" name="engine_no" value="<?php echo set_value('engine_no')?>">
+                                                    <input type="text" class="form-control border border-info <?php echo (isset($validation) && $validation->hasError('engine_no'))? 'is-invalid' : '';?>" id="engine_no" name="engine_no" value="<?php echo set_value('engine_no')?>">
                                                      <?php
                                                                  if(isset($validation) && $validation->hasError('engine_no')){
                                                                         echo '<p class = "invalid-feedback">'.$validation->getError('engine_no').'</p>';
@@ -75,7 +75,7 @@
                                                 <div class="form-row">
                                                     <div class="form-group col-md-4">
                                                         <label for="inputphone">Model**</label>
-                                                        <input type="text" class="form-control rounded <?php echo (isset($validation) && $validation->hasError('model'))? 'is-invalid' : '';?>" id="model" name="model" value="<?php echo set_value('model')?>">
+                                                        <input type="text" class="form-control border border-info rounded <?php echo (isset($validation) && $validation->hasError('model'))? 'is-invalid' : '';?>" id="model" name="model" value="<?php echo set_value('model')?>">
 
                                                         <?php
                                                                  if(isset($validation) && $validation->hasError('model')){
@@ -86,7 +86,7 @@
                                                     </div>
                                                     <div class="form-group col-md-4">
                                                         <label for="inputAddress">Color**</label>
-                                                        <input type="text" class="form-control <?php echo (isset($validation) && $validation->hasError('color'))? 'is-invalid' : '';?>" id="color" name="color" value="<?php echo set_value('color')?>">
+                                                        <input type="text" class="form-control border border-info <?php echo (isset($validation) && $validation->hasError('color'))? 'is-invalid' : '';?>" id="color" name="color" value="<?php echo set_value('color')?>">
 
                                                         <?php
                                                                  if(isset($validation) && $validation->hasError('color')){
@@ -97,7 +97,7 @@
                                                     </div>
                                                     <div class="form-group  col-md-4">
                                                     <label for="inputpass">Manufacture Year**</label>
-                                                    <input type="text" class="form-control <?php echo (isset($validation) && $validation->hasError('m_year'))? 'is-invalid' : '';?>" id="m_year" name="m_year" value="<?php echo set_value('m_year')?>">
+                                                    <input type="text" class="form-control border border-info <?php echo (isset($validation) && $validation->hasError('m_year'))? 'is-invalid' : '';?>" id="m_year" name="m_year" value="<?php echo set_value('m_year')?>">
 
                                                     <?php
                                                                  if(isset($validation) && $validation->hasError('m_year')){
@@ -108,7 +108,7 @@
                                                 </div>
                                                  <div class="form-group  col-md-4">
                                                     <label for="inputcpass">Mileage**</label>
-                                                    <input type="text" class="form-control <?php echo (isset($validation) && $validation->hasError('mileage'))? 'is-invalid' : '';?>" id="mileage" name="mileage" value="<?php echo set_value('mileage')?>">
+                                                    <input type="text" class="form-control border border-info <?php echo (isset($validation) && $validation->hasError('mileage'))? 'is-invalid' : '';?>" id="mileage" name="mileage" value="<?php echo set_value('mileage')?>">
                                                     <?php
                                                                  if(isset($validation) && $validation->hasError('mileage')){
                                                                         echo '<p class = "invalid-feedback">'.$validation->getError('mileage').'</p>';

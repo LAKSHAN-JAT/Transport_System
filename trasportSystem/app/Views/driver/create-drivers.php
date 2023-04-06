@@ -41,7 +41,7 @@
                                                 <div class="form-row">
                                                     <div class="form-group col-md-4">
                                                         <label>Employee No**</label>
-                                                        <input type="text" class="form-control rounded <?php echo (isset($validation) && $validation->hasError('emp_no'))? 'is-invalid' : '';?>" id="emp_no" name = "emp_no" value="<?php echo set_value('emp_no')?>">
+                                                        <input type="text" class="form-control border border-info rounded <?php echo (isset($validation) && $validation->hasError('emp_no'))? 'is-invalid' : '';?>" id="emp_no" name = "emp_no" value="<?php echo set_value('emp_no')?>">
                                                         <?php
                                                                  if(isset($validation) && $validation->hasError('emp_no')){
                                                                         echo '<p class = "invalid-feedback">'.$validation->getError('emp_no').'</p>';
@@ -51,7 +51,7 @@
                                                     </div>
                                                     <div class="form-group col-md-4">
                                                         <label for="inputlname">Finger Print No.**</label>
-                                                        <input type="text" class="form-control <?php echo (isset($validation) && $validation->hasError('finger_print_no'))? 'is-invalid' : '';?>" id="finger_print_no" name= "finger_print_no"value="<?php echo set_value('finger_print_no')?>">
+                                                        <input type="text" class="form-control border border-info <?php echo (isset($validation) && $validation->hasError('finger_print_no'))? 'is-invalid' : '';?>" id="finger_print_no" name= "finger_print_no"value="<?php echo set_value('finger_print_no')?>">
 
                                                          <?php
                                                                  if(isset($validation) && $validation->hasError('finger_print_no')){
@@ -62,7 +62,7 @@
                                                     </div>
                                                 <div class="form-group col-md-4">
                                                         <label>Driver NIC**</label>
-                                                        <input type="text" class="form-control rounded <?php echo (isset($validation) && $validation->hasError('nic'))? 'is-invalid' : '';?>" id="nic" name = "nic" value="<?php echo set_value('nic')?>">
+                                                        <input type="text" class="form-control border border-info rounded <?php echo (isset($validation) && $validation->hasError('nic'))? 'is-invalid' : '';?>" id="nic" name = "nic" value="<?php echo set_value('nic')?>">
                                                         <?php
                                                                  if(isset($validation) && $validation->hasError('nic')){
                                                                         echo '<p class = "invalid-feedback">'.$validation->getError('nic').'</p>';
@@ -72,7 +72,7 @@
                                                     </div>
                                                       <div class="form-group col-md-4">
                                                         <label for="inputlname">Name with initials**</label>
-                                                        <input type="text" class="form-control <?php echo (isset($validation) && $validation->hasError('name_with_initials'))? 'is-invalid' : '';?>" id="name_with_initials" name= "name_with_initials" value="<?php echo set_value('name_with_initials')?>">
+                                                        <input type="text" class="form-control border border-info <?php echo (isset($validation) && $validation->hasError('name_with_initials'))? 'is-invalid' : '';?>" id="name_with_initials" name= "name_with_initials" value="<?php echo set_value('name_with_initials')?>">
 
                                                          <?php
                                                                  if(isset($validation) && $validation->hasError('name_with_initials')){
@@ -82,7 +82,7 @@
                                                     </div>
                                                      <div class="form-group col-md-4">
                                                         <label>Contact No.**</label>
-                                                        <input type="text" class="form-control rounded <?php echo (isset($validation) && $validation->hasError('phone'))? 'is-invalid' : '';?>" id="phone" name = "phone" value="<?php echo set_value('phone')?>">
+                                                        <input type="text" class="form-control border border-info rounded <?php echo (isset($validation) && $validation->hasError('phone'))? 'is-invalid' : '';?>" id="phone" name = "phone" value="<?php echo set_value('phone')?>">
                                                         <?php
                                                                  if(isset($validation) && $validation->hasError('phone')){
                                                                         echo '<p class = "invalid-feedback">'.$validation->getError('phone').'</p>';

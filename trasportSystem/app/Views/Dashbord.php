@@ -17,7 +17,7 @@
                             <div class="card-body">
                                 <img src="<?=base_url()?>/template/template/assets/img/avatar/Admin.jpg" class="rounded-circle-lg" alt="admins" class="float-right" width="50" height="50" align = "right">
                                 <h6 class="card-title font-weight-bold">Registered</h6>
-                                <h6 class="card-subtitle mb-2 text-muted"><a href="<?= base_url('admins')?>">ADMINS</a></h6>
+                                <h6 class="card-subtitle mb-2 text-muted"><a href="<?= base_url('admins')?>">ADMINS</a> &nbsp; &nbsp;<i class="fa-solid fa-hand-point-left fa-beat" style= "color: #011ffe;"></i></h6>
                                  <div class="h5 mb-0 font-weight-bold text-gray-800">
 
                                  <?php
@@ -40,7 +40,7 @@
                             <div class="card-body">
                                  <img src="<?=base_url()?>/template/template/assets/img/avatar/users.jpg" class="rounded-circle-lg" alt="member" class="float-right" width="50" height="50" align = "right">
                                 <h6 class="card-title font-weight-bold">Registered Staff</h6>
-                                <h6 class="card-subtitle mb-2 text-muted"><a href="<?= base_url('staff')?>">MEMBERS</a></h6>
+                                <h6 class="card-subtitle mb-2 text-muted"><a href="<?= base_url('staff')?>">MEMBERS</a>&nbsp; &nbsp;<i class="fa-solid fa-hand-point-left fa-beat" style= "color: #011ffe;"></i></h6>
                                
                                  <div class="h5 mb-0 font-weight-bold text-gray-800">
 
@@ -64,7 +64,7 @@
                             <div class="card-body">
                                 <img src="<?=base_url()?>/template/template/assets/img/avatar/visitors.jpeg" class="rounded-circle-lg" alt="admins" class="float-right" width="50" height="50" align = "right">
                                 <h6 class="card-title font-weight-bold">Registered</h6>
-                                <h6 class="card-subtitle mb-2 text-muted"><a href="<?= base_url('visitors')?>">VISITORS</h6></a>
+                                <h6 class="card-subtitle mb-2 text-muted"><a href="<?= base_url('visitors')?>">VISITORS&nbsp; &nbsp;<i class="fa-solid fa-hand-point-left fa-beat" style= "color: #011ffe;"></i></h6></a>
                                <div class="h5 mb-0 font-weight-bold text-gray-800">
 
                                  <?php
@@ -87,7 +87,7 @@
                             <div class="card-body">
                                <img src="<?=base_url()?>/template/template/assets/img/avatar/driver.jpg" class="rounded-circle-lg" alt="driver" class="float-right" width="50" height="50" align = "right">
                                 <h6 class="card-title font-weight-bold">Registered</h6>
-                                <h6 class="card-subtitle mb-2 text-muted"><a href="<?= base_url('drivers')?>">DRIVERS</h6></a>
+                                <h6 class="card-subtitle mb-2 text-muted"><a href="<?= base_url('drivers')?>">DRIVERS&nbsp; &nbsp;<i class="fa-solid fa-hand-point-left fa-beat" style= "color: #011ffe;"></i></h6></a>
                                   <div class="h5 mb-0 font-weight-bold text-gray-800">
 
                                  <?php
@@ -110,7 +110,7 @@
                                                 <div class="card-body">
                                                     <img src="<?=base_url()?>/template/template/assets/img/avatar/1.webp" class="rounded-circle-lg" alt="car" class="float-right" width="60" height="60" align = "right">
                                                     <h6 class="card-title font-weight-bold">Registered</h6>
-                                                    <h6 class="card-subtitle mb-2 text-muted"><a href="<?= base_url('vehicles')?>">VEHICLES</h6></a>
+                                                    <h6 class="card-subtitle mb-2 text-muted"><a href="<?= base_url('vehicles')?>">VEHICLES&nbsp; &nbsp;<i class="fa-solid fa-hand-point-left fa-beat" style= "color: #011ffe;"></i></h6></a>
                      <div class="h5 mb-0 font-weight-bold text-gray-800">
 
                                  <?php
