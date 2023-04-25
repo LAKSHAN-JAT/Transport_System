@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <style>
+
+    body {
+ background-image: url("/template/template/assets/img/avatar/trans.jpg");
+  background-color: #cccccc; /* Used if the image is unavailable */
+  height: 150; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+  </style>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
   <title>Admin Login</title>
@@ -32,7 +43,7 @@
 </script>
 <!-- /END GA --></head>
 
-<body style="background-color: #eeeeee;">
+<body>
   <div id="app">
     <section class="section">
       <div class="container mt-5">
@@ -79,15 +90,15 @@
                     </button>
                   </div>
                   <?php echo form_close();?>
-               
+                <div class="mt-5 text-muted text-center">
+              Don't have an account? <a href="<?= base_url('register')?>">SignUp Now</a>
+            </div>
 
               </div>
             </div>
-            <div class="mt-5 text-muted text-center">
-              Don't have an account? <a href="<?= base_url('register')?>">SignUp Now</a>
-            </div>
+           <br/>
             <div class="simple-footer">
-              Copyright &copy; Online Unit
+             <p class="text-white bg-dark">Copyright &copy; Online Unit</p> 
             </div>
           </div>
         </div>
