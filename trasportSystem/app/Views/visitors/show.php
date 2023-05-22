@@ -14,9 +14,12 @@
                     <div class="col-12  align-self-center">
                         <div class="sub-header mt-3 py-3 px-3 align-self-center d-sm-flex w-100 rounded">
                             <div class="w-sm-100 mr-auto"><h4 class="mb-0">Visitors' Information</h4></div>
-                                <div class="btn-group mb-2">
-                                    <a href="<?= base_url('visitors/create')?>"><button type="button" class="btn btn-outline-primary rounded-btn btn-lg"><i class="fa-solid fa-plus"></i> &nbsp; New</button></a>
+                             <div class="btn-group mb-2">
+                                    <a href="<?= base_url('visitors/create')?>"><button type="button"class="btn btn-primary p-2 rounded mx-3 h4 mb-0 line-height-1 d-none d-lg-block"><span class="text-white font-weight-bold h4"><i class="fa-solid fa-file"></i>&nbsp;+</span></button></a>
                                 </div>
+                                <!-- <div class="btn-group mb-2">
+                                    <a href="<?= base_url('visitors/create')?>"><button type="button" class="btn btn-outline-primary rounded-btn btn-lg"><i class="fa-solid fa-plus"></i> &nbsp; New</button></a>
+                                </div> -->
                          </div>
                     </div>
                     

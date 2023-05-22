@@ -71,7 +71,7 @@ $routes->get('vehicle/create', 'Vehicles::create');
 $routes->post('vehicle/create', 'Vehicles::create');
 $routes->get('vehicle/edit/(:num)', 'Vehicles::edit/$1');
 $routes->post('vehicle/update/(:num)', 'Vehicles::update/$1');
-
+$routes->post('search', 'admins::searchAdmin');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

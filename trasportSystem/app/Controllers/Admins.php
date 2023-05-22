@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 use App\Models\AdminModel;
-
+use App\Models\AdminSearch;
 class Admins extends BaseController
 {
     public function index()
@@ -127,4 +127,15 @@ public function update($id){
                 ->with('status_icon', 'success')
                 ->with('status', 'Admin Updated Successfully!!');
             }
+
+            public function searchAdmin()
+    {
+       $keyword = $this->request->getPost('keyword'); // Assuming the search keyword is sent via POST
+
+        $searchModel = new AdminSearch();
+        $results = $searchModel->search($keyword);
+
+        // Pass the search results to the view
+        return view('admins/show', ['results' => $results]);
+    }
 }
