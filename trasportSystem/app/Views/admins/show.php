@@ -46,7 +46,7 @@
                                                 <th>Group</th>
                                                 <th>Status</th>
                                                 <th>Date</th>
-                                                <th width = "200">Manage</th>
+                                                <th width = "200"><center>Manage</center></th>
                                             </tr>
                                             <?php if(!empty($admins)){
                                                 
