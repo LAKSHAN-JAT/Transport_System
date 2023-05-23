@@ -53,7 +53,7 @@
             <img alt="image" src="<?=base_url()?>/template/template/assets/img/avatar/1.jpg" width="150" class="rounded-circle shadow p-3 mb-5 bg-body rounded">
             </div>
 
-            <div class="card card-primary shadow p-3 mb-5 bg-body rounded">
+            <div class="card shadow p-3 mb-5 bg-body rounded">
               <h5 class="display-9">Transport Management System</h5>
               <?php 
      $errors= session()->getFlashdata('errors');

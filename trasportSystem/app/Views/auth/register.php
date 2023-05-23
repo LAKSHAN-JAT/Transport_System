@@ -59,10 +59,11 @@ void 0===window.kintMicrotimeInitialized&&(window.kintMicrotimeInitialized=1,win
           <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
             <div class="login-brand">
             <img alt="image" src="http://localhost:8080/template/template/assets/img/avatar/1.jpg" width="150"  class="rounded-circle shadow p-3 mb-5 bg-body rounded">
+            <h5 class="display-9">Transport Management System</h5>
             </div>
 
-            <div class="card card-primary shadow p-8 mb-5 bg-body rounded" >
-                <h5 class="display-9">Transport Management System</h5>
+            <div class="card shadow p-8 mb-5 bg-body rounded" >
+                
                  <?php 
      $errors= session()->getFlashdata('errors');
      if(!empty($errors)) {?>
