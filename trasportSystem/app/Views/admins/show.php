@@ -44,7 +44,7 @@
                                                 <th>Phone</th>
                                                 <th>Address</th>
                                                 <th>Group</th>
-                                                <th>Status</th>
+                                                <!-- <th>Status</th> -->
                                                 <th>Date</th>
                                                 <th width = "200"><center>Manage</center></th>
                                             </tr>
@@ -65,7 +65,7 @@
                                                 <td><?php echo $admin['phone']?></td>
                                                   <td><?php echo $admin['address']?></td>
                                              <td><?php echo $admin['groups']?></td>
-                                                 <td><?php echo $admin['Status']?></td>
+                                                 <!-- <td><?php echo $admin['Status']?></td> -->
                                                    <td><?php echo $admin['Date']?></td>
                                                     <td>
                                                         <a href="<?= base_url('admins/edit/'.$admin['id'])?>"  class="btn btn-primary"> <i class="fa fa-edit"></i>&nbsp; Edit</a>

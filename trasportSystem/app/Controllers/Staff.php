@@ -33,7 +33,7 @@ class Staff extends BaseController
                 'nic' => 'required',
                 'branch' => 'required',
                 'contact_no'=> 'required|max_length[10]|min_length[10]',
-                'photo' => 'required',
+                // 'photo' => 'required',
                 'employee_no' => 'required',
                 'finger_print_no' => 'required',
                 'address' => 'required',

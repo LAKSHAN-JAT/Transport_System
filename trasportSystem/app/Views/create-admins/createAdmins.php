@@ -124,10 +124,12 @@
                     </div>
                 
                 <!-- END: Card DATA-->
-            </div>
-            </div>
-            <button type="submit" class="btn btn-primary"><i class="fa-solid fa-save"></i>&nbsp; Save</button>
+                <button type="submit" class="btn btn-primary"><i class="fa-solid fa-save"></i>&nbsp; Save</button>
                                              </form>
+            </div>
+                
+            </div>
+        
             </div>
         </main>
         <!-- END: Content-->

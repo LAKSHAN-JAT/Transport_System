@@ -30,8 +30,8 @@
 
                 <!-- START: Card Data-->
                 <div class="row">
-                    <div class="col-12 mt-4">
-                        <div class="card">
+                    <div class="col-12 mt-3">
+                        <div class="card shadow p-3 mb-5">
                           <div class="card-content">
                                 <div class="card-body">
                                     <div class="row">                                           
@@ -39,8 +39,8 @@
                                             </div>
                                              <form action="<?=base_url('staff/update/'.$staff['id'])?>"name="createForm" id = "createForm" method="post">
                                                 <div class="form-row">
-                                                    <div class="form-group col-md-4">
-                                                        <label>Name**</label>
+                                                    <div class="col-md-4 mb-3">
+                                                         <label for="validationCustom02"><b>Name</b><span style="color:red; font-size: 20px;">*</span></label>
                                                         <input type="text" class="form-control rounded <?php echo (isset($validation) && $validation->hasError('name'))? 'is-invalid' : '';?>" id="name" name = "name" value="<?=$staff['name']?>">
                                                         <?php
                                                                  if(isset($validation) && $validation->hasError('name')){
@@ -49,8 +49,8 @@
                                                         
                                                         ?>
                                                     </div>
-                                                    <div class="form-group col-md-4">
-                                                        <label for="inputlname">NIC**</label>
+                                                    <div class="col-md-4 mb-3">
+                                                        <label for="validationCustom02"><b>NIC Number </b><span style="color:red; font-size: 20px;">*</span></label>
                                                         <input type="text" class="form-control <?php echo (isset($validation) && $validation->hasError('nic'))? 'is-invalid' : '';?>" id="nic" name= "nic"value="<?=$staff['nic']?>">
 
                                                          <?php
@@ -60,8 +60,8 @@
                                                         
                                                         ?>
                                                     </div>
-                                                    <div class="form-group  col-md-4">
-                                                    <label for="inputeAddress">Branch**</label>
+                                                    <div class="col-md-4 mb-3">
+                                                    <label for="validationCustom02"><b>Branch</b><span style="color:red;font-size: 20px;">*</span></label>
                                                     <input type="text" class="form-control <?php echo (isset($validation) && $validation->hasError('branch'))? 'is-invalid' : '';?>" id="branch" name="branch" value="<?=$staff['branch']?>">
                                                      <?php
                                                                  if(isset($validation) && $validation->hasError('branch')){
@@ -73,8 +73,8 @@
                                                 </div>
                                                 
                                                 <div class="form-row">
-                                                    <div class="form-group col-md-4">
-                                                        <label for="inputphone">Contact No.**</label>
+                                                    <div class="col-md-4 mb-3">
+                                                          <label for="validationCustom02"><b>Contact No</b><span style="color:red;font-size: 20px;">*</span></label>
                                                         <input type="text" class="form-control rounded <?php echo (isset($validation) && $validation->hasError('contact_no'))? 'is-invalid' : '';?>" id="contact_no" name="contact_no" value="<?=$staff['contact_no']?>">
 
                                                         <?php
@@ -84,19 +84,9 @@
                                                         
                                                         ?>
                                                     </div>
-                                                    <div class="form-group col-md-4">
-                                                        <label for="inputAddress">Photo**</label>
-                                                        <input type="file" class="form-control <?php echo (isset($validation) && $validation->hasError('photo'))? 'is-invalid' : '';?>" id="photo" name="photo" value="<?=$staff['photo']?>">
-
-                                                        <?php
-                                                                 if(isset($validation) && $validation->hasError('photo')){
-                                                                        echo '<p class = "invalid-feedback">'.$validation->getError('photo').'</p>';
-                                                                 }
-                                                        
-                                                        ?>
-                                                    </div>
-                                                    <div class="form-group  col-md-4">
-                                                    <label for="inputpass">Employee No.**</label>
+                                                 
+                                                    <div class="col-md-4 mb-3">
+                                                     <label for="validationCustom02"><b>Employee No</b><span style="color:red;font-size: 20px;">*</span></label>
                                                     <input type="text" class="form-control <?php echo (isset($validation) && $validation->hasError('employee_no'))? 'is-invalid' : '';?>" id="employee_no" name="employee_no" value="<?=$staff['employee_no']?>">
 
                                                     <?php
@@ -106,8 +96,8 @@
                                                         
                                                         ?>
                                                 </div>
-                                                 <div class="form-group  col-md-4">
-                                                    <label for="inputcpass">Finger Print No.**</label>
+                                                 <div class="col-md-4 mb-3">
+                                                    <label for="validationCustom02"><b>Finger Print No</b><span style="color:red;font-size: 20px;">*</span></label>
                                                     <input type="text" class="form-control <?php echo (isset($validation) && $validation->hasError('finger_print_no'))? 'is-invalid' : '';?>" id="finger_print_no" name="finger_print_no" value="<?=$staff['finger_print_no']?>">
                                                     <?php
                                                                  if(isset($validation) && $validation->hasError('finger_print_no')){
@@ -118,8 +108,8 @@
                                                 </div>
                                                    
 
-                                                <div class="form-group col-md-4">
-                                                        <label>Address**</label>
+                                                <div class="col-md-4 mb-3">
+                                                        <label for="validationCustom02"><b>Address</b><span style="color:red;font-size: 20px;">*</span></label>
                                                         <input type="text" class="form-control rounded <?php echo (isset($validation) && $validation->hasError('address'))? 'is-invalid' : '';?>" id="address" name = "address" value="<?=$staff['address']?>">
                                                         <?php
                                                                  if(isset($validation) && $validation->hasError('address')){
@@ -130,12 +120,14 @@
                                                     </div>
                                                 </div>
                                                  
-                                                <button type="submit" class="btn btn-primary"><i class="fa-solid fa-edit"></i>&nbsp; Update</button>
-                                             </form>
+                                           
                                         </div>
                                     </div>
                                 </div>
+                                     
                             </div>
+                            <button type="submit" class="btn btn-primary"><i class="fa-solid fa-edit"></i>&nbsp; Update</button>
+                                             </form>
                         </div>
                     </div>
                 </div>

@@ -42,7 +42,7 @@
                                                 <th>NIC</th>
                                                 <th>Branch</th>
                                                 <th>Contact No.</th>
-                                                <th>Photo</th>
+                                                <!-- <th>Photo</th> -->
                                                 <th>Employee No.</th>
                                                 <th>Finger Print No.</th>
                                                  <th>Address</th>
@@ -64,7 +64,7 @@
                                                 <td><?php echo $staff['nic']?></td>
                                                 <td><?php echo $staff['branch']?></td>
                                                 <td><?php echo $staff['contact_no']?></td>
-                                                  <td><?php echo $staff['photo']?></td>
+                                                  <!-- <td><?php echo $staff['photo']?></td> -->
                                              <td><?php echo $staff['employee_no']?></td>
                                                  <td><?php echo $staff['finger_print_no']?></td>
                                                   <td><?php echo $staff['address']?></td>

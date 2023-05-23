@@ -30,8 +30,8 @@
 
                 <!-- START: Card Data-->
                 <div class="row">
-                    <div class="col-9 mt-4">
-                        <div class="card">
+                    <div class="col-12 mt-3">
+                        <div class="card shadow p-3 mb-5">
                           <div class="card-content">
                                 <div class="card-body">
                                     <div class="row">                                           
@@ -39,8 +39,8 @@
                                             </div>
                                              <form action="<?=base_url('driver/update/'.$driver['id'])?>" name="createForm" id = "createForm" method="post">
                                                 <div class="form-row">
-                                                    <div class="form-group col-md-4">
-                                                        <label>Employee No**</label>
+                                                    <div class="col-md-4 mb-3">
+                                                           <label for="validationCustom02"><b>Employee No</b><span style="color:red; font-size: 20px;">*</span></label>
                                                         <input type="text" class="form-control rounded <?php echo (isset($validation) && $validation->hasError('emp_no'))? 'is-invalid' : '';?>" id="emp_no" name = "emp_no" value="<?=$driver['emp_no']?>">
                                                         <?php
                                                                  if(isset($validation) && $validation->hasError('emp_no')){
@@ -49,8 +49,8 @@
                                                         
                                                         ?>
                                                     </div>
-                                                    <div class="form-group col-md-4">
-                                                        <label for="inputlname">Finger Print No.**</label>
+                                                    <div class="col-md-4 mb-3">
+                                                         <label for="validationCustom02"><b>Finger Print No</b><span style="color:red; font-size: 20px;">*</span></label>
                                                         <input type="text" class="form-control <?php echo (isset($validation) && $validation->hasError('finger_print_no'))? 'is-invalid' : '';?>" id="finger_print_no" name= "finger_print_no"value="<?=$driver['finger_print_no']?>">
 
                                                          <?php
@@ -60,8 +60,8 @@
                                                         
                                                         ?>
                                                     </div>
-                                                <div class="form-group col-md-4">
-                                                        <label>NIC**</label>
+                                                <div class="col-md-4 mb-3">
+                                                       <label for="validationCustom02"><b>NIC Number</b><span style="color:red;font-size: 20px;">*</span></label>
                                                         <input type="text" class="form-control rounded <?php echo (isset($validation) && $validation->hasError('nic'))? 'is-invalid' : '';?>" id="nic" name = "nic" value="<?=$driver['nic']?>">
                                                         <?php
                                                                  if(isset($validation) && $validation->hasError('nic')){
@@ -70,8 +70,8 @@
                                                         
                                                         ?>
                                                     </div>
-                                                      <div class="form-group col-md-4">
-                                                        <label for="inputlname">Name with initials**</label>
+                                                      <div class="col-md-4 mb-3">
+                                                       <label for="validationCustom02"><b>Name with initials</b><span style="color:red;font-size: 20px;">*</span></label>
                                                         <input type="text" class="form-control <?php echo (isset($validation) && $validation->hasError('name_with_initials'))? 'is-invalid' : '';?>" id="name_with_initials" name= "name_with_initials" value="<?=$driver['name_with_initials']?>">
 
                                                          <?php
@@ -80,8 +80,8 @@
                                                                  }   
                                                         ?>
                                                     </div>
-                                                     <div class="form-group col-md-4">
-                                                        <label>Contact No.**</label>
+                                                     <div class="col-md-4 mb-3">
+                                                        <label for="validationCustom02"><b>Contact No</b><span style="color:red;font-size: 20px;">*</span></label>
                                                         <input type="text" class="form-control rounded <?php echo (isset($validation) && $validation->hasError('phone'))? 'is-invalid' : '';?>" id="phone" name = "phone" value="<?=$driver['phone']?>">
                                                         <?php
                                                                  if(isset($validation) && $validation->hasError('phone')){
@@ -92,11 +92,13 @@
                                                     </div>
                                                 </div>
                                                 </div>
-                                                <button type="submit" class="btn btn-primary"><i class="fa-solid fa-edit"></i>&nbsp; Update</button>
-                                             </form>
+                                               
                                         </div>
                                     </div>
+                                    
                                 </div>
+                                 <button type="submit" class="btn btn-primary"><i class="fa-solid fa-edit"></i>&nbsp; Update</button>
+                                             </form>
                             </div>
                         </div>
                     </div>

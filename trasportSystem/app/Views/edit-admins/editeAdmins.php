@@ -31,7 +31,7 @@
                 <!-- START: Card Data-->
                 <div class="row">
                     <div class="col-12 mt-4">
-                        <div class="card">
+                        <div class="card shadow p-3 mb-5">
                           <div class="card-content">
                                 <div class="card-body">
                                     <div class="row">                                           
@@ -40,7 +40,7 @@
                                             </div>
                                              <form action="<?=base_url('admins/update/'.$admin['id'])?>" method="post">
                                                 <div class="form-row">
-                                                    <div class="form-group col-md-4">
+                                                    <div class="col-md-4 mb-3">
                                                         <label for="validationCustom01"><b>First Name</b><span style="color:red; font-size: 20px;">*</span></label>
                                                         <input type="text" class="form-control rounded <?php echo (isset($validation) && $validation->hasError('firstName'))? 'is-invalid' : '';?>" id="firstName" name = "firstName" value="<?=$admin['firstName']?>">
                                                         <?php
@@ -50,7 +50,7 @@
                                                         
                                                         ?>
                                                     </div>
-                                                    <div class="form-group col-md-4">
+                                                    <div class="col-md-4 mb-3">
                                                         <label for="validationCustom02"><b>Last Name</b><span style="color:red; font-size: 20px;">*</span></label>
                                                         <input type="text" class="form-control <?php echo (isset($validation) && $validation->hasError('lastName'))? 'is-invalid' : '';?>" id="lastName" name= "lastName"value="<?=$admin['lastName']?>">
 
@@ -61,7 +61,7 @@
                                                         
                                                         ?>
                                                     </div>
-                                                    <div class="form-group  col-md-4">
+                                                    <div class="col-md-4 mb-3">
                                                   <label for="validationCustom02"><b>Email Address</b><span style="color:red;font-size: 20px;">*</span></label>
                                                     <input type="text" class="form-control <?php echo (isset($validation) && $validation->hasError('email'))? 'is-invalid' : '';?>" id="email" name="email" value="<?=$admin['email']?>">
                                                      <?php
@@ -74,7 +74,7 @@
                                                 </div>
                                                 
                                                 <div class="form-row">
-                                                    <div class="form-group col-md-4">
+                                                    <div class="col-md-4 mb-3">
                                                        <label for="validationCustomUsername"><b>Phone Number</b><span style="color:red;font-size: 20px;">*</span></label>
                                                         <input type="text" class="form-control rounded <?php echo (isset($validation) && $validation->hasError('phone'))? 'is-invalid' : '';?>" id="phone" name="phone" value="<?=$admin['phone']?>">
 
@@ -85,7 +85,7 @@
                                                         
                                                         ?>
                                                     </div>
-                                                    <div class="form-group col-md-4">
+                                                    <div class="col-md-4 mb-3">
                                                             <label for="validationCustom02"><b>Address</b><span style="color:red;font-size: 20px;">*</span></label>
                                                         <input type="text" class="form-control <?php echo (isset($validation) && $validation->hasError('address'))? 'is-invalid' : '';?>" id="address" name="address" value="<?=$admin['address']?>">
 
@@ -96,7 +96,7 @@
                                                         
                                                         ?>
                                                     </div>
-                                                    <div class="form-group  col-md-4">
+                                                    <div class="col-md-4 mb-3">
                                                      <label for="validationCustom02"><b>Password</b><span style="color:red;font-size: 20px;">*</span></label>
                                                     <input type="password" class="form-control <?php echo (isset($validation) && $validation->hasError('pass'))? 'is-invalid' : '';?>" id="pass" name="pass" value="<?=$admin['pass']?>">
 
@@ -107,7 +107,7 @@
                                                         
                                                         ?>
                                                 </div>
-                                                 <div class="form-group  col-md-4">
+                                                 <div class="col-md-4 mb-3">
                                                     <label for="validationCustom02"><b>Confirm Password</b><span style="color:red;font-size: 20px;">*</span></label>
                                                     <input type="password" class="form-control <?php echo (isset($validation) && $validation->hasError('cpass'))? 'is-invalid' : '';?>" id="cpass" name="cpass" value="<?=$admin['cpass']?>">
                                                     <?php
@@ -119,7 +119,7 @@
                                                 </div>
                                                    
 
-                                                <div class="form-group col-md-4">
+                                                <div class="col-md-4 mb-3">
                                                      <label for="validationDefault02"><b>Group</b><span style="color:red;font-size: 20px;">*</span></label>
                                                       <select class="form-control  <?php echo (isset($validation) && $validation->hasError('groups'))? 'is-invalid' : '';?>" id="groups" name = "groups" value="<?=$admin['groups']?>">
                                                          <option selected disabled value="">--Select--</option>
@@ -145,17 +145,22 @@
                                                     </div> -->
                                                 </div>
                                                  
-                                                <button type="submit" class="btn btn-primary"><i class="fa-solid fa-edit"></i>&nbsp; Update</button>
-                                             </form>
+                                               
                                         </div>
                                     </div>
                                 </div>
+                                 
                             </div>
+                             <button type="submit" class="btn btn-primary"><i class="fa-solid fa-edit"></i>&nbsp; Update</button>
+                                             </form>
                         </div>
+                       
                     </div>
                 </div>
                 <!-- END: Card DATA-->
+                
             </div>
+            
         </main>
         <!-- END: Content-->
 

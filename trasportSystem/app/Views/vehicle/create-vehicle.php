@@ -123,9 +123,10 @@
                                 </div>
                             </div>
                         </div>
-                         <button type="submit" class="btn btn-primary"><i class="fa-solid fa-save"></i>&nbsp; Save</button>
-                                             </form>
+                        
                     </div>
+                     <button type="submit" class="btn btn-primary"><i class="fa-solid fa-save"></i>&nbsp; Save</button>
+                                             </form>
                       
                 </div>
                 

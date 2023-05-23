@@ -30,7 +30,7 @@
                 <!-- Start: Card DATA-->
                 <div class="row">
                     <div class="col-12 mt-4">
-                        <div class="card">
+                        <div class="card shadow p-3 mb-5">
                           <div class="card-content">
                                 <div class="card-body">
                                     <div class="row">                                           
@@ -39,7 +39,7 @@
                                             </div>
                                             <form action="<?=base_url('vehicle/update/'.$vehicle['id'])?>" name="createForm" id = "createForm" method="post">
                                                 <div class="form-row">
-                                                    <div class="form-group col-md-4">
+                                                    <div class="col-md-4 mb-3">
                                                         <label for="validationCustom01"><b>License Plate No</b><span style="color:red; font-size: 20px;">*</span></label>
                                                         <input type="text" class="form-control rounded <?php echo (isset($validation) && $validation->hasError('license_plate_no'))? 'is-invalid' : '';?>" id="license_plate_no" name = "license_plate_no" value="<?=$vehicle['license_plate_no']?>">
                                                     <?php
@@ -50,7 +50,7 @@
                                                         ?>
                                                     </div>
                                                    
-                                                    <div class="form-group col-md-4">
+                                                    <div class="col-md-4 mb-3">
                                                         <label for="validationCustom02"><b>Chassis No</b><span style="color:red; font-size: 20px;">*</span></label>
                                                         <input type="text" class="form-control <?php echo (isset($validation) && $validation->hasError('chassis_no'))? 'is-invalid' : '';?>" id="chassis_no" name= "chassis_no"value="<?=$vehicle['chassis_no']?>">
 
@@ -61,7 +61,7 @@
                                                         
                                                         ?>
                                                     </div>
-                                                    <div class="form-group  col-md-4">
+                                                    <div class="col-md-4 mb-3">
                                                   <label for="validationCustom02"><b>Engine No</b><span style="color:red;font-size: 20px;">*</span></label>
                                                     <input type="text" class="form-control <?php echo (isset($validation) && $validation->hasError('engine_no'))? 'is-invalid' : '';?>" id="engine_no" name="engine_no" value="<?=$vehicle['engine_no']?>"">
                                                       <?php
@@ -71,7 +71,7 @@
                                                         
                                                         ?>
                                                 </div>
-                                                    <div class="form-group col-md-4">
+                                                    <div class="col-md-4 mb-3">
                                                             <label for="validationCustom02"><b>Model</b><span style="color:red;font-size: 20px;">*</span></label>
                                                         <input type="text" class="form-control <?php echo (isset($validation) && $validation->hasError('model'))? 'is-invalid' : '';?>" id="model" name="model" value="<?=$vehicle['model']?>">
   <?php
@@ -82,7 +82,7 @@
                                                         ?>
                                                     </div>
                                                                
-                                                    <div class="form-group  col-md-4">
+                                                    <div class="col-md-4 mb-3">
                                                      <label for="validationCustom02"><b>Color</b><span style="color:red;font-size: 20px;">*</span></label>
                                                     <input type="text" class="form-control <?php echo (isset($validation) && $validation->hasError('color'))? 'is-invalid' : '';?>" id="color" name="color" value="<?=$vehicle['color']?>">
 
@@ -93,7 +93,7 @@
                                                         
                                                         ?>
                                                     </div>
-                                                 <div class="form-group  col-md-4">
+                                                 <div class="col-md-4 mb-3">
                                                     <label for="validationCustom02"><b>Manufacture Year</b><span style="color:red;font-size: 20px;">*</span></label>
                                                     <input type="text" class="form-control <?php echo (isset($validation) && $validation->hasError('m_year'))? 'is-invalid' : '';?>" id="m_year" name="m_year" value="<?=$vehicle['m_year']?>">
                                                      <?php
@@ -103,7 +103,7 @@
                                                         
                                                         ?>
                                                 </div>
-                                                       <div class="form-group  col-md-4">
+                                                       <div class="col-md-4 mb-3">
                                                     <label for="validationCustom02"><b>Mileage</b><span style="color:red;font-size: 20px;">*</span></label>
                                                     <input type="text" class="form-control <?php echo (isset($validation) && $validation->hasError('mileage'))? 'is-invalid' : '';?>" id="mileage" name="mileage" value="<?=$vehicle['mileage']?>">
                                                <?php
@@ -114,13 +114,16 @@
                                                         ?>
                                                 </div>
                                                 </div>
-                                                 
-                                                <button type="submit" class="btn btn-primary"><i class="fa-solid fa-edit"></i>&nbsp; Update</button>
-                                             </form>
+                                         
                                         </div>
                                     </div>
+                                            
                                 </div>
+                                
+                                           
                             </div>
+                                 <button type="submit" class="btn btn-primary"><i class="fa-solid fa-edit"></i>&nbsp; Update</button>
+                                             </form>
                         </div>
                     </div>
                 </div>

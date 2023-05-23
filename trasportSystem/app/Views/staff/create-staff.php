@@ -28,87 +28,76 @@
                 </div>
                 <!-- END: Breadcrumbs-->
 
-                <!-- START: Card Data-->
+                  <!-- START: Card Data-->
                 <div class="row">
-                    <div class="col-12 mt-4">
-                        <div class="card">
-                          <div class="card-content">
+                    <div class="col-12 mt-3">
+                        <div class="card shadow p-3 mb-5 bg-white rounded">
+                         
+                            <div class="card-content">
                                 <div class="card-body">
                                     <div class="row">                                           
                                         <div class="col-12">
-                                            </div>
-                                             <form name="createForm" id = "createForm" method="post">
+                                        </div>
+                                            <form name="createForm" id = "createForm" method="post">
                                                 <div class="form-row">
-                                                    <div class="form-group col-md-4">
-                                                        <label>Name**</label>
-                                                        <input type="text" class="form-control border border-info rounded <?php echo (isset($validation) && $validation->hasError('name'))? 'is-invalid' : '';?>" id="name" name = "name" value="<?php echo set_value('name')?>">
-                                                        <?php
+                                                     <div class="col-md-4 mb-3">
+                                                        <label for="validationCustom02"><b>Name</b><span style="color:red; font-size: 20px;">*</span></label>
+                                                        <input type="text" class="form-control <?php echo (isset($validation) && $validation->hasError('name'))? 'is-invalid' : '';?>" id="name" name = "name" value="<?php echo set_value('name')?>">
+                                                      <?php
                                                                  if(isset($validation) && $validation->hasError('name')){
                                                                         echo '<p class = "invalid-feedback">'.$validation->getError('name').'</p>';
                                                                  }
                                                         
                                                         ?>
                                                     </div>
-                                                    <div class="form-group col-md-4">
-                                                        <label for="inputlname">NIC**</label>
-                                                        <input type="text" class="form-control border border-info <?php echo (isset($validation) && $validation->hasError('nic'))? 'is-invalid' : '';?>" id="nic" name= "nic"value="<?php echo set_value('nic')?>">
-
-                                                         <?php
+                                                    <div class="col-md-4 mb-3">
+                                                        <label for="validationCustom02"><b>NIC Number </b><span style="color:red; font-size: 20px;">*</span></label>
+                                                        <input type="text" class="form-control <?php echo (isset($validation) && $validation->hasError('nic'))? 'is-invalid' : '';?>" id="nic" name= "nic"value="<?php echo set_value('nic')?>">
+                                                        <?php
                                                                  if(isset($validation) && $validation->hasError('nic')){
                                                                         echo '<p class = "invalid-feedback">'.$validation->getError('nic').'</p>';
                                                                  }
                                                         
                                                         ?>
                                                     </div>
-                                                    <div class="form-group  col-md-4">
-                                                    <label for="inputeAddress">Branch**</label>
-                                                    <input type="text" class="form-control border border-info <?php echo (isset($validation) && $validation->hasError('branch'))? 'is-invalid' : '';?>" id="branch" name="branch" value="<?php echo set_value('branch')?>">
-                                                     <?php
+                                                    <div class="col-md-4 mb-3">
+                                                        <label for="validationCustom02"><b>Branch</b><span style="color:red;font-size: 20px;">*</span></label>
+                                                        <input type="text" class="form-control <?php echo (isset($validation) && $validation->hasError('branch'))? 'is-invalid' : '';?>" id="branch" name="branch" value="<?php echo set_value('branch')?>">
+         <?php
                                                                  if(isset($validation) && $validation->hasError('branch')){
                                                                         echo '<p class = "invalid-feedback">'.$validation->getError('branch').'</p>';
                                                                  }
                                                         
                                                         ?>
                                                 </div>
-                                                </div>
+                                              
                                                 
-                                                <div class="form-row">
-                                                    <div class="form-group col-md-4">
-                                                        <label for="inputphone">Contact No.**</label>
-                                                        <input type="text" class="form-control border border-info rounded <?php echo (isset($validation) && $validation->hasError('contact_no'))? 'is-invalid' : '';?>" id="contact_no" name="contact_no" value="<?php echo set_value('contact_no')?>">
-
-                                                        <?php
+                                                     <div class="col-md-4 mb-3">
+                                                        <label for="validationCustom02"><b>Contact No</b><span style="color:red;font-size: 20px;">*</span></label>
+                                                        <input type="text" class="form-control <?php echo (isset($validation) && $validation->hasError('contact_no'))? 'is-invalid' : '';?>" id="contact_no" name="contact_no" value="<?php echo set_value('contact_no')?>">
+           <?php
                                                                  if(isset($validation) && $validation->hasError('contact_no')){
                                                                         echo '<p class = "invalid-feedback">'.$validation->getError('contact_no').'</p>';
                                                                  }
                                                         
                                                         ?>
                                                     </div>
-                                                    <div class="form-group col-md-4">
-                                                        <label for="inputAddress">Photo(.jpg,jpeg,png,gif)**</label>
-                                                        <input type="file" class="form-control border border-info <?php echo (isset($validation) && $validation->hasError('photo'))? 'is-invalid' : '';?>" id="photo" name="photo" value="<?php echo set_value('photo')?>">
-
-                                                        <?php
-                                                                 if(isset($validation) && $validation->hasError('photo')){
-                                                                        echo '<p class = "invalid-feedback">'.$validation->getError('photo').'</p>';
-                                                                 }
-                                                        
-                                                        ?>
-                                                    </div>
-                                                    <div class="form-group  col-md-4">
-                                                    <label for="inputpass">Employee No.**</label>
-                                                    <input type="text" class="form-control border border-info <?php echo (isset($validation) && $validation->hasError('employee_no'))? 'is-invalid' : '';?>" id="employee_no" name="employee_no" value="<?php echo set_value('employee_no')?>">
-
-                                                    <?php
+                                                              
+                                                
+                                                          <div class="col-md-4 mb-3">
+                                                        <label for="validationCustom02"><b>Employee No</b><span style="color:red;font-size: 20px;">*</span></label>
+                                                        <input type="text" class="form-control <?php echo (isset($validation) && $validation->hasError('employee_no'))? 'is-invalid' : '';?>" id="employee_no" name="employee_no" value="<?php echo set_value('employee_no')?>">
+                                 <?php
                                                                  if(isset($validation) && $validation->hasError('employee_no')){
                                                                         echo '<p class = "invalid-feedback">'.$validation->getError('employee_no').'</p>';
                                                                  }
                                                         
                                                         ?>
                                                 </div>
-                                                 <div class="form-group  col-md-4">
-                                                    <label for="inputcpass">Finger Print No.**</label>
-                                                    <input type="text" class="form-control border border-info <?php echo (isset($validation) && $validation->hasError('finger_print_no'))? 'is-invalid' : '';?>" id="finger_print_no" name="finger_print_no" value="<?php echo set_value('finger_print_no')?>">
+                                                        <div class="col-md-4 mb-3">
+                                                        <label for="validationCustom02"><b>Finger Print No</b><span style="color:red;font-size: 20px;">*</span></label>
+                                                        <input type="text" class="form-control <?php echo (isset($validation) && $validation->hasError('finger_print_no'))? 'is-invalid' : '';?>" id="finger_print_no" name="finger_print_no" value="<?php echo set_value('finger_print_no')?>">
+                               
                                                     <?php
                                                                  if(isset($validation) && $validation->hasError('finger_print_no')){
                                                                         echo '<p class = "invalid-feedback">'.$validation->getError('finger_print_no').'</p>';
@@ -117,28 +106,37 @@
                                                         ?>
                                                 </div>
                                                    
-
-                                                <div class="form-group col-md-4">
-                                                        <label>Address**</label>
-                                                        <input type="text" class="form-control border border-info rounded <?php echo (isset($validation) && $validation->hasError('address'))? 'is-invalid' : '';?>" id="address" name = "address" value="<?php echo set_value('address')?>">
-                                                        <?php
+                                
+                                                 <div class="col-md-4 mb-3">
+                                                        <label for="validationCustom02"><b>Address</b><span style="color:red;font-size: 20px;">*</span></label>
+                                                        <input type="text" class="form-control <?php echo (isset($validation) && $validation->hasError('address'))? 'is-invalid' : '';?>" id="address" name = "address" value="<?php echo set_value('address')?>">
+                                       <?php
                                                                  if(isset($validation) && $validation->hasError('address')){
                                                                         echo '<p class = "invalid-feedback">'.$validation->getError('address').'</p>';
                                                                  }
                                                         
                                                         ?>
                                                     </div>
-                                                </div>
-                                                 
-                                                <button type="submit" class="btn btn-primary"><i class="fa-solid fa-save"></i>&nbsp; Save</button>
-                                             </form>
+                                                                </div>
                                         </div>
                                     </div>
+                                   
                                 </div>
                             </div>
                         </div>
+                        
+                    </div>
+                           <button type="submit" class="btn btn-primary"><i class="fa-solid fa-save"></i>&nbsp; Save</button>
+                         </form>
+                                    </div>
+                             
+                                </div>
+                            </div>
+                            
+                        </div>
                     </div>
                 </div>
+                
                 <!-- END: Card DATA-->
             </div>
         </main>
