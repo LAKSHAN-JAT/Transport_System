@@ -121,7 +121,7 @@ class Auth extends BaseController
                 return redirect()->to(base_url('dashboard'));
         }else{
 
-            session()->setFlashdata('message', 'Employee number is incorrect..!!');
+            session()->setFlashdata('error', 'Employee number is incorrect..!!');
             return redirect()->back();
             
         }

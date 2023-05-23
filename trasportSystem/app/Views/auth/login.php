@@ -51,10 +51,10 @@
           <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
             <div class="login-brand">
             <img alt="image" src="<?=base_url()?>/template/template/assets/img/avatar/1.jpg" width="150" class="rounded-circle shadow p-3 mb-5 bg-body rounded">
+            <h6 class="display-9">Transport Management System </h6>
             </div>
 
             <div class="card shadow p-3 mb-5 bg-body rounded">
-              <h5 class="display-9">Transport Management System</h5>
               <?php 
      $errors= session()->getFlashdata('errors');
      if(!empty($errors)) {?>
@@ -73,7 +73,7 @@
       echo '</div>';
     }
        ?>
-              <div class="card-header"><h4> <i class="fa-solid fa-star"></i> Login Administrator!</h4></div>
+              <div class="card-header"><h4> <i class="fa-solid fa-star"></i> Login Admin</h4></div>
               <div class="card-body">
                <?php
                     echo form_open('auth/check_login');
@@ -97,7 +97,7 @@
 
               </div>
             </div>
-           <br/>
+          
             <div class="simple-footer">
              <p class="text-white bg-dark">Copyright &copy; Online Unit</p> 
             </div>

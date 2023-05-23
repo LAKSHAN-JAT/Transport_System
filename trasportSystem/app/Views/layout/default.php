@@ -90,11 +90,11 @@
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
 
-          <a href="https://www.doenets.lk/" style="font-size:x-small"> Transport Management System</a>
+          <a href="https://www.doenets.lk/" title="www.donets.lk"style="font-size:x-small"> Transport Management System</a>
           <img alt="image" src="<?=base_url()?>/template/template/assets/img/avatar/1.jpg" class="shadow p-3 mb-5 bg-body rounded-circle" height="100px" width="100px">
           </div>
           <div class="sidebar-brand sidebar-brand-sm">
-            <a href="<?=site_url()?>"><img alt="image" src="<?=base_url()?>/template/template/assets/img/avatar/1.jpg" class="rounded-circle" height="50px" width="50px">TMS</a>
+            <a href="https://www.doenets.lk/" title="www.donets.lk"><img alt="image" src="<?=base_url()?>/template/template/assets/img/avatar/1.jpg"  class="rounded-circle" height="50px" width="50px">TMS</a>
           </div>
           <br/><br/>  <br/>
           <ul class="sidebar-menu">
