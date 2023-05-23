@@ -31,9 +31,9 @@
                                 <!-- START: Card Data-->
                 <div class="row">
                     <div class="col-12 mt-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="table-responsive">
+                        <div class="card shadow p-3 mb-5">
+                            <div class="card-body shadow p-3 mb-5">
+                                <div class="table-responsive ">
                                     <table id="example" class="display table dataTable table-striped table-bordered">
                                         <thead>
                                             <tr>
